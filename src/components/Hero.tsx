@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section id="home" className="relative min-h-[100svh] overflow-hidden">
+    <section id="home" className="relative min-h-[70svh] overflow-hidden md:min-h-[75svh]">
       <Image
         src="/images/img-6383.jpg"
         alt="Reset Studios outdoor training lifestyle"
@@ -14,7 +14,7 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/35 to-ink/70" />
 
-      <div className="relative z-10 flex min-h-[100svh] flex-col items-center justify-center px-5 pb-16 pt-28 text-center">
+      <div className="relative z-10 flex min-h-[70svh] flex-col items-center justify-center px-5 pb-14 pt-28 text-center md:min-h-[75svh]">
         <p className="animate-fade-up mb-4 text-[11px] font-medium uppercase tracking-[0.35em] text-white/80 md:text-xs">
           Mind · Body · Reset
         </p>
