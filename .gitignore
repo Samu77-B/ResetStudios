@@ -24,6 +24,9 @@
 .DS_Store
 *.pem
 
+# source media (web-optimised copies live in /public)
+/assets/
+
 # debug
 npm-debug.log*
 yarn-debug.log*
