@@ -66,7 +66,7 @@ export const FOUNDERS = [
     bio: "Supports women with nervous system regulation, identity, self trust and grounded change.",
     cta: "Explore Coaching",
     href: "#coaching",
-    image: "/images/img-6385.jpg",
+    image: "/images/Fernanda-Goncalves.png",
   },
   {
     name: "Andrenys Garcia",
@@ -74,7 +74,7 @@ export const FOUNDERS = [
     bio: "Leads movement, breathwork, stretch and strength sessions that feel calm, supportive and accessible.",
     cta: "Explore Movement",
     href: "#movement",
-    image: "/images/img-6386.jpg",
+    image: "/images/Andrenys-Garcia.png",
   },
 ] as const;
 
