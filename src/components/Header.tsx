@@ -31,100 +31,107 @@ export function Header() {
   }, [open]);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        scrolled || open ? "bg-ink/95 backdrop-blur-md" : "bg-transparent"
-      }`}
-    >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 md:px-8">
-        <Link href="#home" className="relative z-10 flex shrink-0 items-center gap-3">
-          <Image
-            src="/logos/logo-white.png"
-            alt="Reset Studios"
-            width={48}
-            height={48}
-            className="h-10 w-10 object-contain md:h-12 md:w-12"
-            priority
-          />
-          <div className="hidden sm:block">
-            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-white">
-              Reset Studios
-            </p>
-            <p className="text-[10px] uppercase tracking-[0.18em] text-white/70">
-              Mind & Body
-            </p>
-          </div>
-        </Link>
-
-        <nav className="hidden items-center gap-8 lg:flex">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-[13px] font-medium uppercase tracking-[0.12em] text-white/90 transition hover:text-lemon"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="hidden items-center gap-3 lg:flex">
-          <BookingButton className="bg-lemon px-5 py-2.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:bg-lemon-deep">
-            Book
-          </BookingButton>
-        </div>
-
-        <button
-          type="button"
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-          className="relative z-10 flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
-        >
-          <span
-            className={`block h-0.5 w-6 bg-white transition ${
-              open ? "translate-y-2 rotate-45" : ""
-            }`}
-          />
-          <span
-            className={`block h-0.5 w-6 bg-white transition ${
-              open ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`block h-0.5 w-6 bg-white transition ${
-              open ? "-translate-y-2 -rotate-45" : ""
-            }`}
-          />
-        </button>
-      </div>
-
-      <div
-        className={`fixed inset-0 bg-ink transition-opacity duration-300 lg:hidden ${
-          open
-            ? "pointer-events-auto opacity-100"
-            : "pointer-events-none opacity-0"
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-[70] transition-colors duration-300 ${
+          scrolled || open ? "bg-ink/95 backdrop-blur-md" : "bg-transparent"
         }`}
       >
-        <nav className="flex h-full flex-col items-center justify-center gap-8 px-6">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 md:px-8">
+          <Link
+            href="#home"
+            onClick={() => setOpen(false)}
+            className="relative flex shrink-0 items-center gap-3"
+          >
+            <Image
+              src="/logos/logo-white.png"
+              alt="Reset Studios"
+              width={48}
+              height={48}
+              className="h-10 w-10 object-contain md:h-12 md:w-12"
+              priority
+            />
+            <div className="hidden sm:block">
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-white">
+                Reset Studios
+              </p>
+              <p className="text-[10px] uppercase tracking-[0.18em] text-white/70">
+                Mind & Body
+              </p>
+            </div>
+          </Link>
+
+          <nav className="hidden items-center gap-8 lg:flex">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-[13px] font-medium uppercase tracking-[0.12em] text-white/90 transition hover:text-lemon"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="hidden items-center gap-3 lg:flex">
+            <BookingButton className="bg-lemon px-5 py-2.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:bg-lemon-deep">
+              Book
+            </BookingButton>
+          </div>
+
+          <button
+            type="button"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+            className="relative flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
+          >
+            <span
+              className={`block h-0.5 w-6 bg-white transition ${
+                open ? "translate-y-2 rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`block h-0.5 w-6 bg-white transition ${
+                open ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`block h-0.5 w-6 bg-white transition ${
+                open ? "-translate-y-2 -rotate-45" : ""
+              }`}
+            />
+          </button>
+        </div>
+      </header>
+
+      <div
+        className={`fixed inset-0 z-[60] bg-ink transition-opacity duration-300 lg:hidden ${
+          open
+            ? "visible opacity-100"
+            : "invisible pointer-events-none opacity-0"
+        }`}
+        aria-hidden={!open}
+      >
+        <nav className="flex h-dvh flex-col items-center justify-center gap-6 px-6 pb-10 pt-24">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="font-display text-3xl text-white transition hover:text-lemon"
+              className="font-display text-[clamp(1.75rem,8vw,2.25rem)] leading-none text-white transition hover:text-lemon"
             >
               {link.label}
             </Link>
           ))}
           <BookingButton
             onClick={() => setOpen(false)}
-            className="mt-4 bg-lemon px-8 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-ink"
+            className="mt-2 bg-lemon px-8 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-ink"
           >
             Book
           </BookingButton>
         </nav>
       </div>
-    </header>
+    </>
   );
 }
