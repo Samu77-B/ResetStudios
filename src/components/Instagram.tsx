@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { ParallaxImage } from "@/components/ParallaxImage";
 
 const shots = [
   "/images/img-6385.jpg",
@@ -24,11 +24,11 @@ export function Instagram() {
             rel="noopener noreferrer"
             className="relative aspect-square overflow-hidden"
           >
-            <Image
+            <ParallaxImage
               src={src}
               alt={`Reset Studios Instagram ${i + 1}`}
-              fill
-              className="object-cover transition duration-500 hover:scale-105"
+              intensity={28}
+              imageClassName="transition duration-500 group-hover:brightness-110"
               sizes="(max-width: 768px) 50vw, 16vw"
             />
           </Link>

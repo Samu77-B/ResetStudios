@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { ParallaxImage } from "@/components/ParallaxImage";
 
 export function Intro() {
   return (
@@ -7,11 +7,10 @@ export function Intro() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <div className="relative mx-auto w-full max-w-md lg:mx-0">
           <div className="relative aspect-[3/4] overflow-hidden">
-            <Image
+            <ParallaxImage
               src="/images/img-5629.jpg"
               alt="Reset Studios coach outdoors"
-              fill
-              className="object-cover"
+              intensity={36}
               sizes="(max-width: 1024px) 90vw, 420px"
             />
           </div>

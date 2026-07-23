@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { ParallaxImage } from "@/components/ParallaxImage";
 
 export function Memberships() {
   return (
@@ -7,11 +7,10 @@ export function Memberships() {
       id="memberships"
       className="relative overflow-hidden px-5 py-24 text-center md:px-8 md:py-32"
     >
-      <Image
+      <ParallaxImage
         src="/images/img-6404.jpg"
         alt=""
-        fill
-        className="object-cover"
+        intensity={56}
         sizes="100vw"
       />
       <div className="absolute inset-0 bg-ink/75" />

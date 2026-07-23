@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ParallaxImage } from "@/components/ParallaxImage";
 
 export function BlogMarquee() {
   const phrase = "RECIPES  /  WORKOUT TIPS  /  HEALTHY HABITS  /  ";
@@ -9,11 +10,11 @@ export function BlogMarquee() {
       id="journal"
       className="relative overflow-hidden bg-ink-soft py-20 md:py-28"
     >
-      <Image
+      <ParallaxImage
         src="/images/img-6404.jpg"
         alt=""
-        fill
-        className="object-cover opacity-35"
+        intensity={52}
+        imageClassName="opacity-35"
         sizes="100vw"
       />
       <div className="absolute inset-0 bg-ink/70" />

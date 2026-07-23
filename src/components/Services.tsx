@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { ParallaxImage } from "@/components/ParallaxImage";
 
 const services = [
   {
@@ -42,11 +42,11 @@ export function Services() {
                 : "items-center"
             }`}
           >
-            <Image
+            <ParallaxImage
               src={service.image}
               alt={service.alt}
-              fill
-              className="object-cover transition duration-700 group-hover:scale-105"
+              intensity={40}
+              imageClassName="transition duration-700 group-hover:brightness-110"
               sizes="100vw"
             />
             <div className="absolute inset-0 bg-ink/50 transition group-hover:bg-ink/40" />

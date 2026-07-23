@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { ParallaxImage } from "@/components/ParallaxImage";
 
 export function Hero() {
   return (
@@ -7,12 +7,12 @@ export function Hero() {
       id="home"
       className="relative min-h-[70svh] overflow-hidden md:min-h-[75svh]"
     >
-      <Image
+      <ParallaxImage
         src="/images/photoroom-20260520-54717-pm.jpg"
         alt="Reset Studios coaches in the gym"
-        fill
         priority
-        className="object-cover object-center"
+        intensity={60}
+        imageClassName="object-center"
         sizes="100vw"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/35 to-ink/70" />
