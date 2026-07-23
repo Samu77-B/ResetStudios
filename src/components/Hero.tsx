@@ -1,3 +1,4 @@
+import { BookingButton } from "@/components/booking/BookingProvider";
 import { ParallaxImage } from "@/components/ParallaxImage";
 import { CLASSES, SITE } from "@/lib/site";
 
@@ -7,14 +8,26 @@ export function Hero() {
       id="home"
       className="relative min-h-[70svh] overflow-hidden md:min-h-[80svh]"
     >
-      <ParallaxImage
-        src="/images/photoroom-20260520-54717-pm.jpg"
-        alt="Reset Studios fitness classes"
-        priority
-        intensity={60}
-        imageClassName="object-center"
-        sizes="100vw"
-      />
+      <div className="md:hidden">
+        <ParallaxImage
+          src="/images/homePageImage-Mobile.png"
+          alt="Reset Studios fitness classes"
+          priority
+          intensity={60}
+          imageClassName="object-center"
+          sizes="100vw"
+        />
+      </div>
+      <div className="hidden md:block">
+        <ParallaxImage
+          src="/images/homePageImage-Desktop.png"
+          alt="Reset Studios fitness classes"
+          priority
+          intensity={60}
+          imageClassName="object-center"
+          sizes="100vw"
+        />
+      </div>
       <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/55 to-ink/80" />
 
       <div className="relative z-10 mx-auto flex min-h-[70svh] max-w-6xl items-center px-5 py-28 md:min-h-[80svh] md:px-8">
@@ -83,18 +96,18 @@ export function Hero() {
           </div>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a
-              href={SITE.bookTwoClassesUrl}
+            <BookingButton
+              packageType="two"
               className="inline-flex justify-center bg-lemon px-6 py-3.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:bg-lemon-deep"
             >
               Book Two Classes · {CLASSES.pricing.two}
-            </a>
-            <a
-              href={SITE.bookSingleClassUrl}
+            </BookingButton>
+            <BookingButton
+              packageType="single"
               className="inline-flex justify-center border border-white/40 px-6 py-3.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-white transition hover:border-lemon hover:text-lemon"
             >
               Book A Single Class · {CLASSES.pricing.single}
-            </a>
+            </BookingButton>
           </div>
 
           <p className="mt-6 text-sm text-white/60">

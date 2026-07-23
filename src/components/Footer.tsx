@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { BookFooterLinks } from "@/components/booking/BookFooterLinks";
+import { BookingButton } from "@/components/booking/BookingProvider";
 import { SITE } from "@/lib/site";
 
 const columns = [
@@ -14,15 +16,7 @@ const columns = [
   },
   {
     title: "Book",
-    links: [
-      { href: SITE.bookTwoClassesUrl, label: "Two Classes · £10", external: true },
-      {
-        href: SITE.bookSingleClassUrl,
-        label: "Single Class · £7",
-        external: true,
-      },
-      { href: SITE.enquireUrl, label: "Enquire", external: true },
-    ],
+    isBooking: true as const,
   },
   {
     title: "Connect",
@@ -77,8 +71,23 @@ export function Footer() {
             <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-lemon">
               {col.title}
             </p>
-            <ul className="mt-5 space-y-3">
-              {col.links.map((link) => (
+            {"isBooking" in col ? (
+              <>
+                <BookFooterLinks />
+                <ul className="mt-3 space-y-3">
+                  <li>
+                    <a
+                      href={SITE.enquireUrl}
+                      className="text-base leading-[1.5] text-white/70 transition hover:text-white"
+                    >
+                      Enquire
+                    </a>
+                  </li>
+                </ul>
+              </>
+            ) : (
+              <ul className="mt-5 space-y-3">
+                {col.links.map((link) => (
                 <li key={link.label}>
                   {link.external ? (
                     <a
@@ -106,6 +115,7 @@ export function Footer() {
                 </li>
               ))}
             </ul>
+            )}
           </div>
         ))}
       </div>
@@ -115,12 +125,12 @@ export function Footer() {
           Work Hard · Show Up ·{" "}
           <span className="font-script text-[1.05em] text-lemon">Reset</span>
         </p>
-        <a
-          href={SITE.bookTwoClassesUrl}
+        <BookingButton
+          packageType="two"
           className="mt-6 inline-flex bg-lemon px-8 py-3.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:bg-lemon-deep"
         >
           Book Two Classes · £10
-        </a>
+        </BookingButton>
         <p className="mt-8 text-[11px] uppercase tracking-[0.14em] text-white/40">
           © {new Date().getFullYear()} Reset Studios. All rights reserved.
         </p>

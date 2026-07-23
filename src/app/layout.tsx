@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Rock_Salt } from "next/font/google";
+import { BookingProvider } from "@/components/booking/BookingProvider";
 import { SITE } from "@/lib/site";
 import "./globals.css";
 
@@ -36,7 +37,9 @@ export default function RootLayout({
       lang="en"
       className={`${sans.variable} ${script.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-bone text-ink font-sans">{children}</body>
+      <body className="min-h-full bg-bone text-ink font-sans">
+        <BookingProvider>{children}</BookingProvider>
+      </body>
     </html>
   );
 }

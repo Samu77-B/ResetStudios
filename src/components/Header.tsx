@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { SITE } from "@/lib/site";
+import { BookingButton } from "@/components/booking/BookingProvider";
 
 const links = [
   { href: "#workshop", label: "Workshop" },
@@ -69,12 +69,12 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <a
-            href={SITE.bookTwoClassesUrl}
+          <BookingButton
+            packageType="two"
             className="bg-lemon px-5 py-2.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:bg-lemon-deep"
           >
             Book Two Classes
-          </a>
+          </BookingButton>
         </div>
 
         <button
@@ -120,13 +120,13 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <a
-            href={SITE.bookTwoClassesUrl}
+          <BookingButton
+            packageType="two"
             onClick={() => setOpen(false)}
             className="mt-4 bg-lemon px-8 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-ink"
           >
             Book Two Classes
-          </a>
+          </BookingButton>
         </nav>
       </div>
     </header>
