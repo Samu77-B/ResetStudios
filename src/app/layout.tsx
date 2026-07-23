@@ -18,18 +18,11 @@ const script = Rock_Salt({
 export const metadata: Metadata = {
   title: SITE.title,
   description: SITE.description,
-  metadataBase: new URL(SITE.domain),
   openGraph: {
     title: SITE.title,
     description: SITE.description,
     siteName: SITE.name,
     type: "website",
-    url: SITE.domain,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: SITE.title,
-    description: SITE.description,
   },
 };
 

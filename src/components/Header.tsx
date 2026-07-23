@@ -6,12 +6,10 @@ import { useEffect, useState } from "react";
 import { SITE } from "@/lib/site";
 
 const links = [
-  { href: "#home", label: "Home" },
+  { href: "#workshop", label: "Workshop" },
   { href: "#coaching", label: "Coaching" },
-  { href: "#services", label: "Services" },
-  { href: "#approach", label: "Approach" },
-  { href: "#book", label: "Book" },
-  { href: "#contact", label: "Contact" },
+  { href: "#movement", label: "Movement" },
+  { href: "#resources", label: "Resources" },
 ];
 
 export function Header() {
@@ -39,7 +37,7 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 md:px-8">
-        <Link href="#home" className="relative z-10 shrink-0">
+        <Link href="#home" className="relative z-10 flex shrink-0 items-center gap-3">
           <Image
             src="/logos/logo-white.png"
             alt="Reset Studios"
@@ -48,6 +46,14 @@ export function Header() {
             className="h-10 w-10 object-contain md:h-12 md:w-12"
             priority
           />
+          <div className="hidden sm:block">
+            <p className="text-sm font-semibold uppercase tracking-[0.12em] text-white">
+              Reset Studios
+            </p>
+            <p className="text-[10px] uppercase tracking-[0.18em] text-white/70">
+              Mind & Body
+            </p>
+          </div>
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
@@ -64,12 +70,10 @@ export function Header() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            href={SITE.bookUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={SITE.bookTwoClassesUrl}
             className="bg-lemon px-5 py-2.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:bg-lemon-deep"
           >
-            Book Online
+            Book Two Classes
           </a>
         </div>
 
@@ -117,13 +121,11 @@ export function Header() {
             </Link>
           ))}
           <a
-            href={SITE.bookUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={SITE.bookTwoClassesUrl}
             onClick={() => setOpen(false)}
             className="mt-4 bg-lemon px-8 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-ink"
           >
-            Book Online
+            Book Two Classes
           </a>
         </nav>
       </div>

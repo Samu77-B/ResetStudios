@@ -6,28 +6,28 @@ const columns = [
   {
     title: "Explore",
     links: [
+      { href: "#workshop", label: "Workshop", external: false },
       { href: "#coaching", label: "Coaching", external: false },
-      { href: "#services", label: "Services", external: false },
-      { href: "#approach", label: "Approach", external: false },
-      { href: "#book", label: "Book", external: false },
+      { href: "#movement", label: "Movement", external: false },
+      { href: "#founders", label: "Founders", external: false },
     ],
   },
   {
     title: "Book",
     links: [
-      { href: SITE.bookUrl, label: "Book Online", external: true },
+      { href: SITE.bookTwoClassesUrl, label: "Two Classes · £10", external: true },
       {
-        href: SITE.appointmentUrl,
-        label: "Appointment",
+        href: SITE.bookSingleClassUrl,
+        label: "Single Class · £7",
         external: true,
       },
-      { href: `mailto:${SITE.email}`, label: "Email Us", external: true },
+      { href: SITE.enquireUrl, label: "Enquire", external: true },
     ],
   },
   {
     title: "Connect",
     links: [
-      { href: SITE.domain, label: "resetstudios.co.uk", external: true },
+      { href: SITE.instagram, label: SITE.instagramHandle, external: true },
       { href: `mailto:${SITE.email}`, label: SITE.email, external: true },
     ],
   },
@@ -46,9 +46,10 @@ export function Footer() {
             className="h-14 w-14 object-contain"
           />
           <p className="mt-5 max-w-xs text-base leading-[1.5] text-white/65">
-            Reset Studios — holistic health coaching and online personal
-            training in the UK. Transformative support for mind and body.
+            Reset Studios — mind, body and nervous system in one place. Fitness
+            classes, workshops, coaching and movement in North London.
           </p>
+          <p className="mt-4 text-sm text-white/50">{SITE.address}</p>
           <div className="mt-6 flex gap-3">
             <div className="relative h-20 w-16 rotate-[-4deg] overflow-hidden border-2 border-white/20 bg-white p-1">
               <Image
@@ -82,7 +83,9 @@ export function Footer() {
                   {link.external ? (
                     <a
                       href={link.href}
-                      target={link.href.startsWith("mailto:") ? undefined : "_blank"}
+                      target={
+                        link.href.startsWith("mailto:") ? undefined : "_blank"
+                      }
                       rel={
                         link.href.startsWith("mailto:")
                           ? undefined
@@ -109,22 +112,20 @@ export function Footer() {
 
       <div className="border-t border-white/10 px-5 py-10 text-center md:px-8">
         <p className="font-display text-[clamp(1.75rem,6vw,3.5rem)] text-white">
-          Start Your{" "}
+          Work Hard · Show Up ·{" "}
           <span className="font-script text-[1.05em] text-lemon">Reset</span>
         </p>
         <a
-          href={SITE.bookUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+          href={SITE.bookTwoClassesUrl}
           className="mt-6 inline-flex bg-lemon px-8 py-3.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:bg-lemon-deep"
         >
-          Book Online
+          Book Two Classes · £10
         </a>
         <p className="mt-8 text-[11px] uppercase tracking-[0.14em] text-white/40">
           © {new Date().getFullYear()} Reset Studios. All rights reserved.
         </p>
         <p className="mt-2 text-[11px] tracking-[0.08em] text-lemon/80">
-          Holistic Health Coach · UK
+          Mind & Body · {SITE.instagramHandle}
         </p>
         <p className="mt-5 text-sm leading-[1.5] text-white/50">
           Another amazing web project by{" "}

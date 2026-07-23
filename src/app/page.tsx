@@ -1,15 +1,16 @@
-import { BlogMarquee } from "@/components/BlogMarquee";
+import { BrandPromise } from "@/components/BrandPromise";
+import { Businesses } from "@/components/Businesses";
+import { Coaching } from "@/components/Coaching";
 import { Footer } from "@/components/Footer";
+import { Founders } from "@/components/Founders";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Instagram } from "@/components/Instagram";
-import { Intro } from "@/components/Intro";
-import { Memberships } from "@/components/Memberships";
-import { Newsletter } from "@/components/Newsletter";
-import { Reviews } from "@/components/Reviews";
-import { Services } from "@/components/Services";
-import { Stats } from "@/components/Stats";
-import { Testimonials } from "@/components/Testimonials";
+import { Movement } from "@/components/Movement";
+import { Process } from "@/components/Process";
+import { Quote } from "@/components/Quote";
+import { Resources } from "@/components/Resources";
+import { Workshop } from "@/components/Workshop";
 
 export default function Home() {
   return (
@@ -17,14 +18,15 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Intro />
-        <Stats />
-        <Services />
-        <Testimonials />
-        <BlogMarquee />
-        <Newsletter />
-        <Memberships />
-        <Reviews />
+        <BrandPromise />
+        <Workshop />
+        <Process />
+        <Founders />
+        <Businesses />
+        <Coaching />
+        <Movement />
+        <Quote />
+        <Resources />
         <Instagram />
       </main>
       <Footer />

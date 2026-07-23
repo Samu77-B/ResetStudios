@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ParallaxImage } from "@/components/ParallaxImage";
+import { SITE } from "@/lib/site";
 
 const shots = [
   "/images/img-6385.jpg",
@@ -19,7 +20,7 @@ export function Instagram() {
         {shots.map((src, i) => (
           <Link
             key={src}
-            href="https://instagram.com"
+            href={SITE.instagram}
             target="_blank"
             rel="noopener noreferrer"
             className="relative aspect-square overflow-hidden"
