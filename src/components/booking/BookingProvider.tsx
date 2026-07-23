@@ -9,9 +9,9 @@ import {
   type ReactNode,
 } from "react";
 import {
-  ClassBookingPanel,
+  BookingFormPanel,
   type BookingPackage,
-} from "@/components/booking/ClassBookingPanel";
+} from "@/components/booking/BookingFormPanel";
 
 export type { BookingPackage };
 
@@ -103,17 +103,11 @@ function BookingDrawer({
         aria-modal="true"
         aria-labelledby="booking-title"
         onClick={(event) => event.stopPropagation()}
-        className={`absolute inset-y-0 left-0 z-10 flex w-full max-w-lg flex-col bg-ink shadow-2xl transition-transform duration-300 ease-out ${
+        className={`absolute inset-y-0 left-0 z-10 flex w-full max-w-md flex-col border-r border-white/10 bg-ink/88 p-5 shadow-2xl backdrop-blur-md transition-transform duration-300 ease-out md:p-6 ${
           visible ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex-1 overflow-y-auto p-5 md:p-6">
-          <ClassBookingPanel
-            packageType={packageType}
-            onClose={onClose}
-            showClose
-          />
-        </div>
+        <BookingFormPanel packageType={packageType} onClose={onClose} />
       </aside>
     </div>
   );
