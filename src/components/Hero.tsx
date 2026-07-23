@@ -5,11 +5,11 @@ export function Hero() {
   return (
     <section id="home" className="relative min-h-[70svh] overflow-hidden md:min-h-[75svh]">
       <Image
-        src="/images/img-6383.jpg"
-        alt="Reset Studios outdoor training lifestyle"
+        src="/images/photoroom-20260520-54717-pm.jpg"
+        alt="Reset Studios coaches in the gym"
         fill
         priority
-        className="object-cover object-[center_30%]"
+        className="object-cover object-center"
         sizes="100vw"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/35 to-ink/70" />
