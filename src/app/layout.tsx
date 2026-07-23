@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Caveat, Montserrat } from "next/font/google";
+import { Montserrat, Rock_Salt } from "next/font/google";
 import "./globals.css";
 
 const sans = Montserrat({
@@ -8,10 +8,10 @@ const sans = Montserrat({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const script = Caveat({
+const script = Rock_Salt({
   subsets: ["latin"],
   variable: "--font-script",
-  weight: ["500", "600", "700"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
