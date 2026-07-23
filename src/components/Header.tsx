@@ -6,10 +6,11 @@ import { useEffect, useState } from "react";
 import { BookingButton } from "@/components/booking/BookingProvider";
 
 const links = [
-  { href: "#workshop", label: "Workshop" },
-  { href: "#coaching", label: "Coaching" },
-  { href: "#movement", label: "Movement" },
-  { href: "#resources", label: "Resources" },
+  { href: "/#workshop", label: "Workshop" },
+  { href: "/#coaching", label: "Coaching" },
+  { href: "/#movement", label: "Movement" },
+  { href: "/#resources", label: "Resources" },
+  { href: "/founders", label: "Founders" },
 ];
 
 export function Header() {

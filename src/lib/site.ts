@@ -67,7 +67,7 @@ export const FOUNDERS = [
     roles: "Founder · Life Coach · Author",
     bio: "Supports women with nervous system regulation, identity, self trust and grounded change.",
     cta: "Explore Coaching",
-    href: "#coaching",
+    href: "/#coaching",
     image: "/images/Fernanda-Goncalves.png",
   },
   {
@@ -75,7 +75,7 @@ export const FOUNDERS = [
     roles: "Founder · Personal Trainer & Movement Coach",
     bio: "Leads movement, breathwork, stretch and strength sessions that feel calm, supportive and accessible.",
     cta: "Explore Movement",
-    href: "#movement",
+    href: "/#movement",
     image: "/images/Andrenys-Garcia.png",
   },
 ] as const;

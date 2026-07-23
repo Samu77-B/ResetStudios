@@ -1,5 +1,4 @@
 import { BrandPromise } from "@/components/BrandPromise";
-import { Businesses } from "@/components/Businesses";
 import { Coaching } from "@/components/Coaching";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -20,7 +19,6 @@ export default function Home() {
         <BrandPromise />
         <Workshop />
         <Process />
-        <Businesses />
         <Coaching />
         <Movement />
         <Quote />

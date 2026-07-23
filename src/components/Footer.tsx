@@ -8,9 +8,9 @@ const columns = [
   {
     title: "Explore",
     links: [
-      { href: "#workshop", label: "Workshop", external: false },
-      { href: "#coaching", label: "Coaching", external: false },
-      { href: "#movement", label: "Movement", external: false },
+      { href: "/#workshop", label: "Workshop", external: false },
+      { href: "/#coaching", label: "Coaching", external: false },
+      { href: "/#movement", label: "Movement", external: false },
       { href: "/founders", label: "Founders", external: false },
     ],
   },
