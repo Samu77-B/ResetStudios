@@ -103,6 +103,17 @@ export function Footer() {
         <p className="mt-2 text-[11px] tracking-[0.08em] text-lemon/80">
           Mind · Body · Reset
         </p>
+        <p className="mt-5 text-sm leading-[1.5] text-white/50">
+          Another amazing web project by{" "}
+          <a
+            href="https://paradigmhub.io"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/70 underline decoration-white/30 underline-offset-2 transition hover:text-lemon hover:decoration-lemon"
+          >
+            the Paradigm Studio
+          </a>
+        </p>
       </div>
     </footer>
   );
