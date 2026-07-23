@@ -1,27 +1,29 @@
+import { SITE } from "@/lib/site";
+
 const reviews = [
   {
-    text: "Best decision I made this year. The coaching is sharp and the community is genuine.",
-    name: "Ellie M.",
+    text: "Holistic health coaching that supports lasting lifestyle change — not just short-term motivation.",
+    name: "Holistic Coaching",
   },
   {
-    text: "Outdoor sessions are next level. I leave every class clearer and stronger.",
-    name: "Chris T.",
+    text: "Online personal training for UK clients who want expert guidance with flexible scheduling.",
+    name: "Online Training",
   },
   {
-    text: "Finally a studio that treats mind and body as one practice — not a slogan.",
-    name: "Priya S.",
+    text: "Transformative health coaching services focused on mind, body, and sustainable habits.",
+    name: "Mind & Body",
   },
   {
-    text: "Memberships are flexible, the vibe is premium without the pretence.",
-    name: "Noah B.",
+    text: "One-to-one appointments designed around your goals, energy, and real-life routine.",
+    name: "Appointments",
   },
   {
-    text: "I’ve tried everything. Reset is the first place that stuck for longer than a month.",
-    name: "Lauren H.",
+    text: "A clear reset: structured support to help you show up consistently and feel stronger.",
+    name: "Accountability",
   },
   {
-    text: "From first session to now — progressive, personal, and properly motivating.",
-    name: "Marcus W.",
+    text: "Start your wellness journey today with coaching built for long-term results.",
+    name: "Results Focus",
   },
 ];
 
@@ -49,8 +51,12 @@ export function Reviews() {
     <section className="bg-ink px-5 py-20 md:px-8 md:py-24">
       <div className="mx-auto mb-12 max-w-6xl text-center">
         <h2 className="font-display text-[clamp(2rem,4vw,3rem)] text-white">
-          What Members Say
+          Why Clients Choose Reset
         </h2>
+        <p className="mx-auto mt-4 max-w-xl text-base leading-[1.5] text-white/65">
+          Transformative health coaching services for people ready to reset —
+          online and in appointment-based sessions.
+        </p>
       </div>
       <div className="mx-auto grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {reviews.map((review) => (
@@ -60,13 +66,23 @@ export function Reviews() {
           >
             <Stars />
             <p className="mt-4 text-base leading-[1.5] text-white/85">
-              “{review.text}”
+              {review.text}
             </p>
             <p className="mt-5 text-[11px] font-semibold uppercase tracking-[0.12em] text-white/50">
               {review.name}
             </p>
           </article>
         ))}
+      </div>
+      <div className="mt-12 text-center">
+        <a
+          href={SITE.bookUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex bg-lemon px-8 py-3.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:bg-lemon-deep"
+        >
+          Book Online
+        </a>
       </div>
     </section>
   );

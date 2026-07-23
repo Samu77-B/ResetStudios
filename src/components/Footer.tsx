@@ -1,32 +1,34 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SITE } from "@/lib/site";
 
 const columns = [
   {
-    title: "Company",
+    title: "Explore",
     links: [
-      { href: "#studio", label: "About" },
-      { href: "#programs", label: "Programs" },
-      { href: "#memberships", label: "Memberships" },
-      { href: "#coaching", label: "Coaching" },
+      { href: "#coaching", label: "Coaching", external: false },
+      { href: "#services", label: "Services", external: false },
+      { href: "#approach", label: "Approach", external: false },
+      { href: "#book", label: "Book", external: false },
     ],
   },
   {
-    title: "Support",
+    title: "Book",
     links: [
-      { href: "#contact", label: "Contact" },
-      { href: "#journal", label: "Journal" },
-      { href: "#memberships", label: "Pricing" },
-      { href: "#home", label: "FAQs" },
+      { href: SITE.bookUrl, label: "Book Online", external: true },
+      {
+        href: SITE.appointmentUrl,
+        label: "Appointment",
+        external: true,
+      },
+      { href: `mailto:${SITE.email}`, label: "Email Us", external: true },
     ],
   },
   {
-    title: "Socials",
+    title: "Connect",
     links: [
-      { href: "https://instagram.com", label: "Instagram" },
-      { href: "https://tiktok.com", label: "TikTok" },
-      { href: "https://youtube.com", label: "YouTube" },
-      { href: "mailto:hello@resetstudios.co", label: "Email" },
+      { href: SITE.domain, label: "resetstudios.co.uk", external: true },
+      { href: `mailto:${SITE.email}`, label: SITE.email, external: true },
     ],
   },
 ];
@@ -44,8 +46,8 @@ export function Footer() {
             className="h-14 w-14 object-contain"
           />
           <p className="mt-5 max-w-xs text-base leading-[1.5] text-white/65">
-            Reset Studios — mind-body training for people who want strength with
-            soul. Train with intention. Live with clarity.
+            Reset Studios — holistic health coaching and online personal
+            training in the UK. Transformative support for mind and body.
           </p>
           <div className="mt-6 flex gap-3">
             <div className="relative h-20 w-16 rotate-[-4deg] overflow-hidden border-2 border-white/20 bg-white p-1">
@@ -77,15 +79,27 @@ export function Footer() {
             <ul className="mt-5 space-y-3">
               {col.links.map((link) => (
                 <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-base leading-[1.5] text-white/70 transition hover:text-white"
-                    {...(link.href.startsWith("http")
-                      ? { target: "_blank", rel: "noopener noreferrer" }
-                      : {})}
-                  >
-                    {link.label}
-                  </Link>
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      target={link.href.startsWith("mailto:") ? undefined : "_blank"}
+                      rel={
+                        link.href.startsWith("mailto:")
+                          ? undefined
+                          : "noopener noreferrer"
+                      }
+                      className="break-all text-base leading-[1.5] text-white/70 transition hover:text-white"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-base leading-[1.5] text-white/70 transition hover:text-white"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -95,13 +109,22 @@ export function Footer() {
 
       <div className="border-t border-white/10 px-5 py-10 text-center md:px-8">
         <p className="font-display text-[clamp(1.75rem,6vw,3.5rem)] text-white">
-          Get In The <span className="text-lemon">Loop</span>
+          Start Your{" "}
+          <span className="font-script text-[1.05em] text-lemon">Reset</span>
         </p>
-        <p className="mt-6 text-[11px] uppercase tracking-[0.14em] text-white/40">
+        <a
+          href={SITE.bookUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex bg-lemon px-8 py-3.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:bg-lemon-deep"
+        >
+          Book Online
+        </a>
+        <p className="mt-8 text-[11px] uppercase tracking-[0.14em] text-white/40">
           © {new Date().getFullYear()} Reset Studios. All rights reserved.
         </p>
         <p className="mt-2 text-[11px] tracking-[0.08em] text-lemon/80">
-          Mind · Body · Reset
+          Holistic Health Coach · UK
         </p>
         <p className="mt-5 text-sm leading-[1.5] text-white/50">
           Another amazing web project by{" "}

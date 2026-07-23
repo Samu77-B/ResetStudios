@@ -1,41 +1,43 @@
-import Link from "next/link";
 import { ParallaxImage } from "@/components/ParallaxImage";
+import { SITE } from "@/lib/site";
 
 const services = [
   {
-    line: "Workout",
-    accent: "Plans",
-    href: "#programs",
+    line: "Holistic",
+    accent: "Coaching",
+    href: SITE.bookUrl,
     image: "/images/img-6403.jpg",
-    alt: "Outdoor lunge training session",
+    alt: "Outdoor holistic health coaching session",
     align: "center" as const,
   },
   {
-    line: "All In One",
-    accent: "Membership",
-    href: "#memberships",
+    line: "Online",
+    accent: "Training",
+    href: SITE.bookUrl,
     image: "/images/img-6391.jpg",
-    alt: "Group outdoor fitness class",
+    alt: "Online personal training support",
     align: "center" as const,
   },
   {
-    line: "Meal",
-    accent: "Plans",
-    href: "#journal",
+    line: "Book An",
+    accent: "Appointment",
+    href: SITE.appointmentUrl,
     image: "/images/photo-3875-singular-display-fullpicture.jpg",
-    alt: "Community training with equipment",
+    alt: "Book a Reset Studios appointment",
     align: "end" as const,
   },
 ];
 
 export function Services() {
   return (
-    <section id="programs" className="bg-bone px-0 py-3 md:py-4">
+    <section id="services" className="bg-bone px-0 py-3 md:py-4">
       <div className="flex flex-col gap-3 md:gap-4">
         {services.map((service) => (
-          <Link
+          <a
             key={`${service.line}-${service.accent}`}
             href={service.href}
+            target="_blank"
+            rel="noopener noreferrer"
             className={`group relative flex min-h-[200px] overflow-hidden md:min-h-[240px] lg:min-h-[280px] ${
               service.align === "end"
                 ? "items-end pb-8 md:pb-10"
@@ -60,10 +62,10 @@ export function Services() {
                 </span>
               </h3>
               <span className="mb-1 shrink-0 text-[11px] font-semibold uppercase tracking-[0.18em] text-lemon transition group-hover:text-lemon-deep md:text-xs">
-                Learn More
+                Book Now
               </span>
             </div>
-          </Link>
+          </a>
         ))}
       </div>
     </section>

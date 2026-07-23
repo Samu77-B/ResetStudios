@@ -1,6 +1,8 @@
 # Reset Studios
 
-Marketing site for **Reset Studios** — mind-body training, coaching, and memberships.
+Marketing site for **Reset Studios** — holistic health coaching and online personal training in the UK.
+
+Live brand site: [resetstudios.co.uk](https://www.resetstudios.co.uk/)
 
 ## Stack
 

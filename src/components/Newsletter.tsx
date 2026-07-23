@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { FormEvent, useState } from "react";
+import { SITE } from "@/lib/site";
 
 export function Newsletter() {
   const [email, setEmail] = useState("");
@@ -10,6 +11,8 @@ export function Newsletter() {
   function onSubmit(e: FormEvent) {
     e.preventDefault();
     if (!email.trim()) return;
+    // Open mail client as a simple capture until a form backend is connected
+    window.location.href = `mailto:${SITE.email}?subject=Reset%20Studios%20enquiry&body=Hi%20Reset%20Studios%2C%0A%0APlease%20add%20me%20to%20updates.%0A%0AEmail%3A%20${encodeURIComponent(email)}`;
     setDone(true);
   }
 
@@ -18,16 +21,25 @@ export function Newsletter() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
           <h2 className="font-display text-[clamp(2rem,4.5vw,3rem)] text-ink">
-            Retake Control Of Workouts From Home
+            Start Your Wellness Journey Today
           </h2>
           <p className="prose-body mt-6 max-w-md">
-            Get fresh session ideas, recovery tips, and member drops straight to
-            your inbox — no spam, just signal.
+            Get in touch for transformative health coaching, online personal
+            training, or to book an appointment with Reset Studios.
+          </p>
+          <p className="mt-4 text-sm text-muted">
+            Email{" "}
+            <a
+              href={`mailto:${SITE.email}`}
+              className="font-medium text-ink underline decoration-ink/30 underline-offset-2 hover:decoration-ink"
+            >
+              {SITE.email}
+            </a>
           </p>
 
           {done ? (
             <p className="mt-8 text-sm font-semibold uppercase tracking-[0.12em] text-ink">
-              You&apos;re in. Welcome to the loop.
+              Thanks — we&apos;ll be in touch.
             </p>
           ) : (
             <form

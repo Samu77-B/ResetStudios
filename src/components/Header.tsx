@@ -3,13 +3,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { SITE } from "@/lib/site";
 
 const links = [
   { href: "#home", label: "Home" },
-  { href: "#studio", label: "Studio" },
-  { href: "#programs", label: "Programs" },
   { href: "#coaching", label: "Coaching" },
-  { href: "#journal", label: "Journal" },
+  { href: "#services", label: "Services" },
+  { href: "#approach", label: "Approach" },
+  { href: "#book", label: "Book" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -62,12 +63,14 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Link
-            href="#memberships"
-            className="bg-lemon px-5 py-2.5 text-[12px] font-semibold uppercase tracking-[0.16em] text-ink transition hover:bg-lemon-deep"
+          <a
+            href={SITE.bookUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-lemon px-5 py-2.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:bg-lemon-deep"
           >
-            Join Now
-          </Link>
+            Book Online
+          </a>
         </div>
 
         <button
@@ -97,7 +100,9 @@ export function Header() {
 
       <div
         className={`fixed inset-0 bg-ink transition-opacity duration-300 lg:hidden ${
-          open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+          open
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0"
         }`}
       >
         <nav className="flex h-full flex-col items-center justify-center gap-8 px-6">
@@ -111,13 +116,15 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="#memberships"
+          <a
+            href={SITE.bookUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="mt-4 bg-lemon px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-ink"
+            className="mt-4 bg-lemon px-8 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-ink"
           >
-            Join Now
-          </Link>
+            Book Online
+          </a>
         </nav>
       </div>
     </header>

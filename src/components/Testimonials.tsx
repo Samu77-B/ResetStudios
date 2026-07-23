@@ -1,42 +1,43 @@
 import Image from "next/image";
+import { SITE } from "@/lib/site";
 
 const cards = [
   {
     quote:
-      "The outdoor sessions completely changed how I show up for myself. Stronger, calmer, clearer.",
-    name: "Amina K.",
+      "Holistic coaching that looks at the whole picture — habits, mindset, movement, and the routines that hold it all together.",
+    name: "Whole-Person Focus",
     image: "/images/img-6385.jpg",
   },
   {
     quote:
-      "Coaching that actually listens. My plan flexes with my life without losing intensity.",
-    name: "Jordan P.",
+      "Online personal training for UK clients who need flexibility without losing structure, accountability, or results.",
+    name: "Online Personal Training",
     image: "/images/img-6386.jpg",
   },
   {
     quote:
-      "Community without the ego. Reset made fitness feel like belonging again.",
-    name: "Sofia R.",
+      "Transformative health coaching services built to help you reset — then keep going with a plan that fits real life.",
+    name: "Lasting Change",
     image: "/images/img-6388.jpg",
   },
 ];
 
 export function Testimonials() {
   return (
-    <section id="coaching" className="bg-bone px-5 py-20 md:px-8 md:py-28">
+    <section id="approach" className="bg-bone px-5 py-20 md:px-8 md:py-28">
       <div className="mx-auto max-w-3xl text-center">
         <Image
           src="/images/img-5319-2.jpg"
-          alt="Reset Studios members"
+          alt="Reset Studios"
           width={72}
           height={72}
           className="mx-auto h-16 w-16 rounded-full object-cover"
         />
         <blockquote className="mt-8 font-display text-[clamp(1.5rem,3.5vw,2.25rem)] text-ink">
-          “Reset isn’t a workout. It’s the ritual that keeps me grounded.”
+          “Discover Reset Studios — your holistic health coach in the UK.”
         </blockquote>
         <p className="mt-4 text-sm font-medium uppercase tracking-[0.14em] text-muted">
-          — Maya L., Member
+          Start Your Wellness Journey Today
         </p>
       </div>
 
@@ -73,6 +74,17 @@ export function Testimonials() {
             </div>
           </article>
         ))}
+      </div>
+
+      <div className="mt-12 text-center">
+        <a
+          href={SITE.bookUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex bg-ink px-7 py-3.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-ink-soft"
+        >
+          Explore Coaching
+        </a>
       </div>
     </section>
   );

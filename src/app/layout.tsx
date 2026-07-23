@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Rock_Salt } from "next/font/google";
+import { SITE } from "@/lib/site";
 import "./globals.css";
 
 const sans = Montserrat({
@@ -15,14 +16,20 @@ const script = Rock_Salt({
 });
 
 export const metadata: Metadata = {
-  title: "Reset Studios | Mind Body",
-  description:
-    "Reset Studios — boutique mind-body training, outdoor sessions, coaching, and memberships. Retake control of how you move.",
+  title: SITE.title,
+  description: SITE.description,
+  metadataBase: new URL(SITE.domain),
   openGraph: {
-    title: "Reset Studios | Mind Body",
-    description:
-      "Boutique mind-body training, outdoor sessions, coaching, and memberships.",
+    title: SITE.title,
+    description: SITE.description,
+    siteName: SITE.name,
     type: "website",
+    url: SITE.domain,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE.title,
+    description: SITE.description,
   },
 };
 
