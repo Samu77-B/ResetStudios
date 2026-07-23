@@ -69,11 +69,8 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <BookingButton
-            packageType="two"
-            className="bg-lemon px-5 py-2.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:bg-lemon-deep"
-          >
-            Book Two Classes
+          <BookingButton className="bg-lemon px-5 py-2.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:bg-lemon-deep">
+            Book
           </BookingButton>
         </div>
 
@@ -121,11 +118,10 @@ export function Header() {
             </Link>
           ))}
           <BookingButton
-            packageType="two"
             onClick={() => setOpen(false)}
             className="mt-4 bg-lemon px-8 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-ink"
           >
-            Book Two Classes
+            Book
           </BookingButton>
         </nav>
       </div>

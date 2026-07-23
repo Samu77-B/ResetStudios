@@ -125,11 +125,8 @@ export function Footer() {
           Work Hard · Show Up ·{" "}
           <span className="font-script text-[1.05em] text-lemon">Reset</span>
         </p>
-        <BookingButton
-          packageType="two"
-          className="mt-6 inline-flex bg-lemon px-8 py-3.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:bg-lemon-deep"
-        >
-          Book Two Classes · £10
+        <BookingButton className="mt-6 inline-flex bg-lemon px-8 py-3.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:bg-lemon-deep">
+          Book a Class
         </BookingButton>
         <p className="mt-8 text-[11px] uppercase tracking-[0.14em] text-white/40">
           © {new Date().getFullYear()} Reset Studios. All rights reserved.

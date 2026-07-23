@@ -95,18 +95,9 @@ export function Hero() {
             </p>
           </div>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <BookingButton
-              packageType="two"
-              className="inline-flex justify-center bg-lemon px-6 py-3.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:bg-lemon-deep"
-            >
-              Book Two Classes · {CLASSES.pricing.two}
-            </BookingButton>
-            <BookingButton
-              packageType="single"
-              className="inline-flex justify-center border border-white/40 px-6 py-3.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-white transition hover:border-lemon hover:text-lemon"
-            >
-              Book A Single Class · {CLASSES.pricing.single}
+          <div className="mt-8">
+            <BookingButton className="inline-flex w-full justify-center bg-lemon px-6 py-3.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:bg-lemon-deep sm:w-auto">
+              Book a Class
             </BookingButton>
           </div>
 

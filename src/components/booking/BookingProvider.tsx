@@ -68,14 +68,25 @@ function BookingDrawer({
   packageType: BookingPackage;
   onClose: () => void;
 }) {
+  const [mounted, setMounted] = useState(open);
+  const [visible, setVisible] = useState(open);
   const [selectedPackage, setSelectedPackage] =
     useState<BookingPackage>(packageType);
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
-    setSelectedPackage(packageType);
-    setSubmitted(false);
-  }, [packageType, open]);
+    if (open) {
+      setMounted(true);
+      setSelectedPackage(packageType);
+      setSubmitted(false);
+      const frame = requestAnimationFrame(() => setVisible(true));
+      return () => cancelAnimationFrame(frame);
+    }
+
+    setVisible(false);
+    const timeout = window.setTimeout(() => setMounted(false), 300);
+    return () => window.clearTimeout(timeout);
+  }, [open, packageType]);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -113,25 +124,26 @@ function BookingDrawer({
     setSubmitted(true);
   };
 
+  if (!mounted) return null;
+
   return (
-    <>
-      <div
-        className={`fixed inset-0 z-[60] bg-ink/60 backdrop-blur-sm transition-opacity duration-300 ${
-          open
-            ? "pointer-events-auto opacity-100"
-            : "pointer-events-none opacity-0"
+    <div className="fixed inset-0 z-[80]">
+      <button
+        type="button"
+        aria-label="Close booking form"
+        className={`absolute inset-0 bg-ink/60 backdrop-blur-sm transition-opacity duration-300 ${
+          visible ? "opacity-100" : "opacity-0"
         }`}
         onClick={onClose}
-        aria-hidden={!open}
       />
 
       <aside
         role="dialog"
         aria-modal="true"
         aria-labelledby="booking-title"
-        aria-hidden={!open}
-        className={`fixed inset-y-0 left-0 z-[70] flex w-full max-w-md flex-col bg-bone shadow-2xl transition-transform duration-300 ease-out ${
-          open ? "translate-x-0" : "-translate-x-full"
+        onClick={(event) => event.stopPropagation()}
+        className={`absolute inset-y-0 left-0 z-10 flex w-full max-w-md flex-col bg-bone shadow-2xl transition-transform duration-300 ease-out ${
+          visible ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="flex items-start justify-between border-b border-ink/10 px-6 py-5">
@@ -234,7 +246,8 @@ function BookingDrawer({
 
             <label className="block">
               <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">
-                Phone <span className="normal-case tracking-normal">(optional)</span>
+                Phone{" "}
+                <span className="normal-case tracking-normal">(optional)</span>
               </span>
               <input
                 type="tel"
@@ -246,7 +259,8 @@ function BookingDrawer({
 
             <label className="block">
               <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">
-                Notes <span className="normal-case tracking-normal">(optional)</span>
+                Notes{" "}
+                <span className="normal-case tracking-normal">(optional)</span>
               </span>
               <textarea
                 name="notes"
@@ -282,7 +296,7 @@ function BookingDrawer({
           </div>
         </form>
       </aside>
-    </>
+    </div>
   );
 }
 
