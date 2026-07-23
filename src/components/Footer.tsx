@@ -11,7 +11,7 @@ const columns = [
       { href: "#workshop", label: "Workshop", external: false },
       { href: "#coaching", label: "Coaching", external: false },
       { href: "#movement", label: "Movement", external: false },
-      { href: "#founders", label: "Founders", external: false },
+      { href: "/founders", label: "Founders", external: false },
     ],
   },
   {

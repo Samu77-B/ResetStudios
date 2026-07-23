@@ -2,7 +2,6 @@ import { BrandPromise } from "@/components/BrandPromise";
 import { Businesses } from "@/components/Businesses";
 import { Coaching } from "@/components/Coaching";
 import { Footer } from "@/components/Footer";
-import { Founders } from "@/components/Founders";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Instagram } from "@/components/Instagram";
@@ -21,7 +20,6 @@ export default function Home() {
         <BrandPromise />
         <Workshop />
         <Process />
-        <Founders />
         <Businesses />
         <Coaching />
         <Movement />
