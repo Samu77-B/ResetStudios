@@ -9,7 +9,7 @@ const stats = [
   { end: 10, suffix: "+", label: "Years Coaching" },
 ];
 
-const DURATION_MS = 700;
+const DURATION_MS = 1400;
 
 function CountUp({
   end,
