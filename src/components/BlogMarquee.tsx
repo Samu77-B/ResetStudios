@@ -5,7 +5,10 @@ export function BlogMarquee() {
   const phrase = "RECIPES  /  WORKOUT TIPS  /  HEALTHY HABITS  /  ";
 
   return (
-    <section id="journal" className="relative overflow-hidden bg-ink-soft py-20 md:py-28">
+    <section
+      id="journal"
+      className="relative overflow-hidden bg-ink-soft py-20 md:py-28"
+    >
       <Image
         src="/images/img-6404.jpg"
         alt=""
@@ -18,12 +21,12 @@ export function BlogMarquee() {
       <div className="relative z-10">
         <div className="overflow-hidden border-y border-white/15 py-3">
           <div className="animate-marquee flex w-max whitespace-nowrap">
-            <span className="font-display text-[clamp(2.5rem,8vw,5.5rem)] leading-none text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.55)]">
+            <span className="font-display text-[clamp(2rem,6vw,4rem)] text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.55)]">
               {phrase.repeat(4)}
             </span>
             <span
               aria-hidden
-              className="font-display text-[clamp(2.5rem,8vw,5.5rem)] leading-none text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.55)]"
+              className="font-display text-[clamp(2rem,6vw,4rem)] text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.55)]"
             >
               {phrase.repeat(4)}
             </span>
@@ -32,18 +35,15 @@ export function BlogMarquee() {
 
         <div className="mx-auto mt-12 flex max-w-6xl flex-col items-start justify-between gap-10 px-5 md:flex-row md:items-end md:px-8">
           <div>
-            <h2 className="font-display text-4xl text-white md:text-5xl">
-              From The{" "}
-              <span className="font-script text-[1.15em] font-semibold lowercase tracking-normal text-lemon">
-                Journal
-              </span>
+            <h2 className="font-display text-[clamp(2rem,4vw,3rem)] text-white">
+              From The Journal
             </h2>
-            <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/70">
+            <p className="mt-4 max-w-sm text-base leading-[1.5] text-white/75">
               Movement cues, recovery ideas, and fuel that fits real life.
             </p>
             <Link
               href="#contact"
-              className="mt-6 inline-flex bg-lemon px-6 py-3 text-[12px] font-semibold uppercase tracking-[0.16em] text-ink transition hover:bg-lemon-deep"
+              className="mt-6 inline-flex bg-lemon px-6 py-3 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:bg-lemon-deep"
             >
               Read More
             </Link>
@@ -60,10 +60,10 @@ export function BlogMarquee() {
               />
             </div>
             <div className="px-5 py-5">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-muted">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">
                 Training · 5 Min Read
               </p>
-              <h3 className="mt-2 font-display text-2xl leading-tight text-ink">
+              <h3 className="mt-2 font-display text-xl text-ink">
                 Why Outdoor Sessions Unlock Better Focus
               </h3>
             </div>

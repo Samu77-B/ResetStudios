@@ -16,10 +16,10 @@ export function Stats() {
               i > 0 ? "md:border-l md:border-ink/15" : ""
             }`}
           >
-            <p className="font-display text-5xl text-ink md:text-6xl">
+            <p className="font-display text-4xl text-ink md:text-5xl">
               {stat.value}
             </p>
-            <p className="mt-2 text-[11px] font-medium uppercase tracking-[0.2em] text-muted">
+            <p className="mt-2 text-[11px] font-medium uppercase tracking-[0.14em] text-muted">
               {stat.label}
             </p>
           </div>

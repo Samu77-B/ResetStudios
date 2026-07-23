@@ -1,22 +1,11 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Caveat, DM_Sans } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 
-const display = Bebas_Neue({
-  weight: "400",
+const sans = Montserrat({
   subsets: ["latin"],
-  variable: "--font-display",
-});
-
-const script = Caveat({
-  weight: ["500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-script",
-});
-
-const body = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-body",
+  variable: "--font-sans",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -37,11 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${display.variable} ${script.variable} ${body.variable} h-full antialiased`}
-    >
-      <body className="min-h-full bg-bone text-ink font-body">{children}</body>
+    <html lang="en" className={`${sans.variable} h-full antialiased`}>
+      <body className="min-h-full bg-bone text-ink font-sans">{children}</body>
     </html>
   );
 }

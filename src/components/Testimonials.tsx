@@ -32,14 +32,10 @@ export function Testimonials() {
           height={72}
           className="mx-auto h-16 w-16 rounded-full object-cover"
         />
-        <blockquote className="mt-8 font-display text-[clamp(1.6rem,4vw,2.6rem)] leading-tight text-ink">
-          “Reset isn’t a workout. It’s the{" "}
-          <span className="font-script text-[1.1em] font-semibold lowercase tracking-normal text-ink">
-            ritual
-          </span>{" "}
-          that keeps me grounded.”
+        <blockquote className="mt-8 font-display text-[clamp(1.5rem,3.5vw,2.25rem)] text-ink">
+          “Reset isn’t a workout. It’s the ritual that keeps me grounded.”
         </blockquote>
-        <p className="mt-4 text-sm uppercase tracking-[0.22em] text-muted">
+        <p className="mt-4 text-sm font-medium uppercase tracking-[0.14em] text-muted">
           — Maya L., Member
         </p>
       </div>
@@ -60,7 +56,7 @@ export function Testimonials() {
             >
               <path d="M7.2 18c-1.9 0-3.4-1.6-3.4-3.6 0-2.8 2.2-5.8 5.4-8.1L10.5 8c-1.6 1.2-2.6 2.5-2.9 3.8.6-.3 1.3-.4 2-.4 1.8 0 3.2 1.4 3.2 3.2S11.4 18 9.5 18H7.2zm9.3 0c-1.9 0-3.4-1.6-3.4-3.6 0-2.8 2.2-5.8 5.4-8.1L19.8 8c-1.6 1.2-2.6 2.5-2.9 3.8.6-.3 1.3-.4 2-.4 1.8 0 3.2 1.4 3.2 3.2S20.7 18 18.8 18h-2.3z" />
             </svg>
-            <p className="mt-5 flex-1 text-[15px] leading-relaxed text-ink/80">
+            <p className="mt-5 flex-1 text-base leading-[1.5] text-ink/80">
               {card.quote}
             </p>
             <div className="mt-8 flex items-center gap-3">
@@ -71,7 +67,7 @@ export function Testimonials() {
                 height={40}
                 className="h-10 w-10 rounded-full object-cover"
               />
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink">
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink">
                 {card.name}
               </p>
             </div>

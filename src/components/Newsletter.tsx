@@ -17,19 +17,16 @@ export function Newsletter() {
     <section className="bg-bone px-5 py-20 md:px-8 md:py-28">
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
-          <h2 className="font-display text-[clamp(2.2rem,5vw,3.8rem)] leading-[0.95] text-ink">
-            Retake Control Of Workouts{" "}
-            <span className="font-script text-[1.05em] font-semibold lowercase tracking-normal text-ink">
-              From Home
-            </span>
+          <h2 className="font-display text-[clamp(2rem,4.5vw,3rem)] text-ink">
+            Retake Control Of Workouts From Home
           </h2>
-          <p className="mt-5 max-w-md text-[15px] leading-relaxed text-muted">
+          <p className="prose-body mt-6 max-w-md">
             Get fresh session ideas, recovery tips, and member drops straight to
             your inbox — no spam, just signal.
           </p>
 
           {done ? (
-            <p className="mt-8 text-sm font-semibold uppercase tracking-[0.16em] text-ink">
+            <p className="mt-8 text-sm font-semibold uppercase tracking-[0.12em] text-ink">
               You&apos;re in. Welcome to the loop.
             </p>
           ) : (
@@ -51,7 +48,7 @@ export function Newsletter() {
               />
               <button
                 type="submit"
-                className="h-12 bg-ink px-7 text-[12px] font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-ink-soft"
+                className="h-12 bg-ink px-7 text-[12px] font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-ink-soft"
               >
                 Join
               </button>

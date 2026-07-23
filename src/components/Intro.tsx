@@ -16,31 +16,27 @@ export function Intro() {
             />
           </div>
           <div className="ribbon absolute -bottom-3 left-1/2 z-10 w-[115%] -translate-x-1/2 bg-lemon py-2.5 text-center shadow-sm">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink md:text-xs">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink md:text-xs">
               Follow Us On Instagram
             </p>
           </div>
         </div>
 
         <div className="pt-6 lg:pt-0">
-          <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-muted">
+          <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
             The Reset Way
           </p>
-          <h2 className="font-display text-[clamp(2.4rem,6vw,4.2rem)] leading-[0.95] text-ink">
-            Strength That{" "}
-            <span className="font-script text-[1.05em] font-semibold lowercase tracking-normal text-ink">
-              Feels
-            </span>{" "}
-            Like Freedom
+          <h2 className="font-display text-[clamp(2rem,4.5vw,3.25rem)] text-ink">
+            Strength That Feels Like Freedom
           </h2>
-          <p className="mt-6 max-w-lg text-[15px] leading-relaxed text-muted md:text-base">
+          <p className="prose-body mt-6 max-w-lg text-ink">
             Reset Studios blends coaching, community, and intentional movement —
             indoors and out. We build programs that honour your body, sharpen
             your focus, and make showing up the easiest part of your week.
           </p>
           <Link
             href="#coaching"
-            className="mt-8 inline-flex bg-ink px-7 py-3.5 text-[12px] font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-ink-soft"
+            className="mt-8 inline-flex bg-ink px-7 py-3.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-ink-soft"
           >
             Meet The Studio
           </Link>

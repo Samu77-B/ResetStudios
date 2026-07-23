@@ -40,12 +40,12 @@ export function Services() {
           />
           <div className="absolute inset-0 bg-ink/55 transition group-hover:bg-ink/45" />
           <div className="relative z-10 flex w-full items-center justify-between px-6 py-12 md:px-12 lg:px-20">
-            <h3 className="font-display text-[clamp(2rem,6vw,4.5rem)] leading-none text-white">
+            <h3 className="font-display text-[clamp(1.75rem,5vw,3.5rem)] text-white">
               {service.title}
             </h3>
             <span
               aria-hidden
-              className="flex h-12 w-12 items-center justify-center border border-white/70 text-white transition group-hover:border-lemon group-hover:bg-lemon group-hover:text-ink"
+              className="flex h-12 w-12 shrink-0 items-center justify-center border border-white/70 text-white transition group-hover:border-lemon group-hover:bg-lemon group-hover:text-ink"
             >
               <svg
                 width="22"

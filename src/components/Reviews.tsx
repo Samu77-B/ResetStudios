@@ -48,11 +48,8 @@ export function Reviews() {
   return (
     <section className="bg-ink px-5 py-20 md:px-8 md:py-24">
       <div className="mx-auto mb-12 max-w-6xl text-center">
-        <h2 className="font-display text-4xl text-white md:text-5xl">
-          What Members{" "}
-          <span className="font-script text-[1.1em] font-semibold lowercase tracking-normal text-lemon">
-            Say
-          </span>
+        <h2 className="font-display text-[clamp(2rem,4vw,3rem)] text-white">
+          What Members Say
         </h2>
       </div>
       <div className="mx-auto grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -62,10 +59,10 @@ export function Reviews() {
             className="border border-white/10 px-6 py-7 transition hover:border-lemon/40"
           >
             <Stars />
-            <p className="mt-4 text-sm leading-relaxed text-white/85">
+            <p className="mt-4 text-base leading-[1.5] text-white/85">
               “{review.text}”
             </p>
-            <p className="mt-5 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/50">
+            <p className="mt-5 text-[11px] font-semibold uppercase tracking-[0.12em] text-white/50">
               {review.name}
             </p>
           </article>

@@ -43,12 +43,12 @@ export function Footer() {
             height={64}
             className="h-14 w-14 object-contain"
           />
-          <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/65">
+          <p className="mt-5 max-w-xs text-base leading-[1.5] text-white/65">
             Reset Studios — mind-body training for people who want strength with
             soul. Train with intention. Live with clarity.
           </p>
           <div className="mt-6 flex gap-3">
-            <div className="relative h-20 w-16 overflow-hidden border-2 border-white/20 bg-white p-1 rotate-[-4deg]">
+            <div className="relative h-20 w-16 rotate-[-4deg] overflow-hidden border-2 border-white/20 bg-white p-1">
               <Image
                 src="/images/img-5330.jpg"
                 alt=""
@@ -57,7 +57,7 @@ export function Footer() {
                 sizes="64px"
               />
             </div>
-            <div className="relative h-20 w-16 overflow-hidden border-2 border-white/20 bg-white p-1 rotate-[5deg]">
+            <div className="relative h-20 w-16 rotate-[5deg] overflow-hidden border-2 border-white/20 bg-white p-1">
               <Image
                 src="/images/img-6394.jpg"
                 alt=""
@@ -71,7 +71,7 @@ export function Footer() {
 
         {columns.map((col) => (
           <div key={col.title}>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-lemon">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-lemon">
               {col.title}
             </p>
             <ul className="mt-5 space-y-3">
@@ -79,7 +79,7 @@ export function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/70 transition hover:text-white"
+                    className="text-base leading-[1.5] text-white/70 transition hover:text-white"
                     {...(link.href.startsWith("http")
                       ? { target: "_blank", rel: "noopener noreferrer" }
                       : {})}
@@ -94,16 +94,13 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10 px-5 py-10 text-center md:px-8">
-        <p className="font-display text-[clamp(2rem,8vw,4.5rem)] leading-none text-white">
-          Get In The{" "}
-          <span className="font-script text-[1.15em] font-semibold lowercase tracking-normal text-lemon">
-            Loop
-          </span>
+        <p className="font-display text-[clamp(1.75rem,6vw,3.5rem)] text-white">
+          Get In The <span className="text-lemon">Loop</span>
         </p>
-        <p className="mt-6 text-[11px] uppercase tracking-[0.2em] text-white/40">
+        <p className="mt-6 text-[11px] uppercase tracking-[0.14em] text-white/40">
           © {new Date().getFullYear()} Reset Studios. All rights reserved.
         </p>
-        <p className="mt-2 text-[11px] tracking-[0.12em] text-lemon/80">
+        <p className="mt-2 text-[11px] tracking-[0.08em] text-lemon/80">
           Mind · Body · Reset
         </p>
       </div>
