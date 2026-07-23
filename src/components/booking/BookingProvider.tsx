@@ -103,7 +103,7 @@ function BookingDrawer({
         aria-modal="true"
         aria-labelledby="booking-title"
         onClick={(event) => event.stopPropagation()}
-        className={`absolute inset-y-0 left-0 z-10 flex w-full max-w-md flex-col border-r border-white/10 bg-ink/88 p-5 shadow-2xl backdrop-blur-md transition-transform duration-300 ease-out md:p-6 ${
+        className={`absolute inset-y-0 left-0 z-10 flex h-dvh w-full max-w-md flex-col overflow-hidden border-r border-white/10 bg-ink/88 p-4 shadow-2xl backdrop-blur-md transition-transform duration-300 ease-out md:p-5 ${
           visible ? "translate-x-0" : "-translate-x-full"
         }`}
       >

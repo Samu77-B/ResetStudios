@@ -46,8 +46,8 @@ export function BookingFormPanel({
       `Email: ${email}`,
       phone ? `Phone: ${phone}` : null,
       `Class: ${packageLabel}`,
-      `Session: ${CLASSES.schedule.next}`,
-      `Location: ${CLASSES.location}`,
+      `Session: ${CLASSES.schedule.headline}`,
+      `Location: ${CLASSES.schedule.sessionVenue}`,
       notes ? `Notes: ${notes}` : null,
     ]
       .filter(Boolean)
@@ -60,23 +60,23 @@ export function BookingFormPanel({
   };
 
   const inputClassName =
-    "mt-2 w-full border border-white/15 bg-ink/50 px-4 py-3 text-sm text-white outline-none transition placeholder:text-white/35 focus:border-lemon";
+    "mt-1.5 w-full border border-white/15 bg-ink/50 px-3 py-2.5 text-sm text-white outline-none transition placeholder:text-white/35 focus:border-lemon";
 
   return (
-    <div className="flex h-full flex-col">
-      <div className="flex items-start justify-between gap-4 border-b border-white/10 pb-5">
-        <div>
+    <div className="flex h-full min-h-0 flex-col overflow-hidden">
+      <div className="flex shrink-0 items-start justify-between gap-3 border-b border-white/10 pb-4">
+        <div className="min-w-0 pr-2">
           <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-lemon">
-            Saturday Session
+            {CLASSES.schedule.label}
           </p>
           <h2
             id="booking-title"
-            className="mt-2 font-display text-xl text-white md:text-2xl"
+            className="mt-1.5 font-display text-[clamp(1.25rem,4.5vw,1.75rem)] leading-tight text-white"
           >
-            {CLASSES.schedule.next}
+            {CLASSES.schedule.headline}
           </h2>
-          <p className="mt-1 text-sm text-white/70">{CLASSES.schedule.recurring}</p>
-          <p className="mt-3 text-sm text-white/85">
+          <p className="mt-1 text-xs text-white/70">{CLASSES.schedule.venue}</p>
+          <p className="mt-2 text-xs text-white/85">
             Pricing: One class {CLASSES.pricing.single} · Two classes{" "}
             {CLASSES.pricing.two}
           </p>
@@ -87,7 +87,7 @@ export function BookingFormPanel({
             type="button"
             onClick={onClose}
             aria-label="Close booking form"
-            className="flex h-10 w-10 shrink-0 items-center justify-center border border-white/20 text-white transition hover:border-lemon hover:text-lemon"
+            className="flex h-9 w-9 shrink-0 items-center justify-center border border-white/20 text-white transition hover:border-lemon hover:text-lemon"
           >
             <span aria-hidden className="text-xl leading-none">
               ×
@@ -98,51 +98,51 @@ export function BookingFormPanel({
 
       <form
         onSubmit={handleSubmit}
-        className="flex flex-1 flex-col overflow-y-auto pt-6"
+        className="flex min-h-0 flex-1 flex-col overflow-hidden pt-4"
       >
-        <fieldset className="space-y-3">
+        <fieldset className="shrink-0 space-y-2">
           <legend className="text-[10px] font-semibold uppercase tracking-[0.16em] text-lemon">
             Choose your class
           </legend>
-          <label className="flex cursor-pointer items-start gap-3 border border-white/15 bg-ink/30 p-4 has-[:checked]:border-lemon has-[:checked]:bg-white/5">
+          <label className="flex cursor-pointer items-start gap-2.5 border border-white/15 bg-ink/30 p-3 has-[:checked]:border-lemon has-[:checked]:bg-white/5">
             <input
               type="radio"
               name="package"
               value="two"
               checked={selectedPackage === "two"}
               onChange={() => setSelectedPackage("two")}
-              className="mt-1 accent-lemon"
+              className="mt-0.5 accent-lemon"
             />
             <span>
-              <span className="block font-display text-base text-white">
+              <span className="block font-display text-sm text-white">
                 Two Classes · {CLASSES.pricing.two}
               </span>
-              <span className="mt-1 block text-sm text-white/65">
+              <span className="mt-0.5 block text-xs text-white/65">
                 Best value for regular Saturday sessions
               </span>
             </span>
           </label>
-          <label className="flex cursor-pointer items-start gap-3 border border-white/15 bg-ink/30 p-4 has-[:checked]:border-lemon has-[:checked]:bg-white/5">
+          <label className="flex cursor-pointer items-start gap-2.5 border border-white/15 bg-ink/30 p-3 has-[:checked]:border-lemon has-[:checked]:bg-white/5">
             <input
               type="radio"
               name="package"
               value="single"
               checked={selectedPackage === "single"}
               onChange={() => setSelectedPackage("single")}
-              className="mt-1 accent-lemon"
+              className="mt-0.5 accent-lemon"
             />
             <span>
-              <span className="block font-display text-base text-white">
+              <span className="block font-display text-sm text-white">
                 Single Class · {CLASSES.pricing.single}
               </span>
-              <span className="mt-1 block text-sm text-white/65">
-                One Saturday session at {CLASSES.location}
+              <span className="mt-0.5 block text-xs text-white/65">
+                One Saturday session at {CLASSES.schedule.sessionVenue}
               </span>
             </span>
           </label>
         </fieldset>
 
-        <div className="mt-8 space-y-4">
+        <div className="mt-4 grid min-h-0 flex-1 grid-rows-[auto_auto_auto_minmax(0,1fr)] gap-3">
           <label className="block">
             <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-lemon">
               Full name
@@ -184,7 +184,7 @@ export function BookingFormPanel({
             />
           </label>
 
-          <label className="block">
+          <label className="flex min-h-0 flex-col">
             <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-lemon">
               Notes{" "}
               <span className="normal-case tracking-normal text-white/50">
@@ -193,16 +193,15 @@ export function BookingFormPanel({
             </span>
             <textarea
               name="notes"
-              rows={3}
               placeholder="Anything we should know before your session?"
-              className={`${inputClassName} resize-none`}
+              className={`${inputClassName} min-h-0 flex-1 resize-none`}
             />
           </label>
         </div>
 
-        <div className="mt-auto space-y-3 pt-8">
+        <div className="mt-3 shrink-0 space-y-2 pt-2">
           {submitted ? (
-            <p className="rounded-sm border border-lemon/40 bg-lemon/10 px-4 py-3 text-sm text-white">
+            <p className="rounded-sm border border-lemon/40 bg-lemon/10 px-3 py-2 text-xs text-white">
               Your email app should open with the booking details. If it
               doesn&apos;t, email us at{" "}
               <a href={`mailto:${SITE.email}`} className="text-lemon underline">
@@ -214,12 +213,12 @@ export function BookingFormPanel({
 
           <button
             type="submit"
-            className="w-full bg-lemon px-6 py-3.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:bg-lemon-deep"
+            className="w-full bg-lemon px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:bg-lemon-deep"
           >
             Send booking request
           </button>
 
-          <p className="text-center text-sm text-white/60">
+          <p className="text-center text-xs text-white/60">
             Instagram:{" "}
             <a
               href={SITE.instagram}

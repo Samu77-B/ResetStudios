@@ -30,8 +30,10 @@ export const CLASSES = {
     "Supportive Group Energy",
   ],
   schedule: {
-    next: "Saturday 13th June – 10AM",
-    recurring: "Every Saturday",
+    label: "Saturday Session",
+    headline: "Every Saturday from 10.30am",
+    venue: "at Broomfield Park, Palmers Green",
+    sessionVenue: "Broomfield Park, Palmers Green",
   },
   pricing: { single: "£7", two: "£10" },
 } as const;
