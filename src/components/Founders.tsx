@@ -4,7 +4,7 @@ import { FOUNDERS } from "@/lib/site";
 
 export function Founders() {
   return (
-    <section id="founders" className="bg-bone px-5 py-20 md:px-8 md:py-28">
+    <section id="founders" className="bg-bone px-5 pb-16 pt-10 md:px-8 md:py-28">
       <div className="mx-auto max-w-6xl">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
           The Founders

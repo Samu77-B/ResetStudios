@@ -2,14 +2,14 @@ import { ParallaxImage } from "@/components/ParallaxImage";
 
 export function FoundersHero() {
   return (
-    <section className="relative min-h-[48svh] overflow-hidden md:min-h-[56svh]">
+    <section className="relative min-h-[68svh] overflow-hidden md:min-h-[56svh]">
       <div className="md:hidden">
         <ParallaxImage
           src="/images/Founders-hero-mobile.png"
           alt="Reset Studios founders Fernanda Goncalves and Andrenys Garcia"
           priority
-          intensity={24}
-          imageClassName="object-cover object-[50%_12%]"
+          intensity={20}
+          imageClassName="object-cover object-[50%_14%]"
           sizes="100vw"
         />
       </div>
