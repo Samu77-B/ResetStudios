@@ -9,7 +9,7 @@ export function FoundersHero() {
           alt="Reset Studios founders Fernanda Goncalves and Andrenys Garcia"
           priority
           intensity={32}
-          imageClassName="object-cover object-[center_22%]"
+          imageClassName="object-cover object-[center_40%]"
           sizes="100vw"
         />
       </div>
@@ -19,11 +19,10 @@ export function FoundersHero() {
           alt="Reset Studios founders Fernanda Goncalves and Andrenys Garcia"
           priority
           intensity={40}
-          imageClassName="object-cover object-[center_28%]"
+          imageClassName="object-cover object-[center_38%]"
           sizes="100vw"
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-ink/25 via-ink/10 to-bone" />
     </section>
   );
 }
