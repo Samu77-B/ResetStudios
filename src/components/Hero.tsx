@@ -23,7 +23,7 @@ export function Hero() {
           alt="Reset Studios fitness classes"
           priority
           intensity={60}
-          imageClassName="object-center"
+          imageClassName="object-[54%_16%]"
           sizes="100vw"
         />
       </div>
