@@ -13,7 +13,12 @@ const links = [
   { href: "/founders", label: "Founders" },
 ];
 
-export function Header() {
+type HeaderProps = {
+  /** Always use dark bar (e.g. light page backgrounds) */
+  solid?: boolean;
+};
+
+export function Header({ solid = false }: HeaderProps) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -35,7 +40,9 @@ export function Header() {
     <>
       <header
         className={`fixed inset-x-0 top-0 z-[70] transition-colors duration-300 ${
-          scrolled || open ? "bg-ink/95 backdrop-blur-md" : "bg-transparent"
+          solid || scrolled || open
+            ? "bg-ink/95 backdrop-blur-md"
+            : "bg-transparent"
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 md:px-8">

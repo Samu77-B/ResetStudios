@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function FoundersPage() {
   return (
     <>
-      <Header />
+      <Header solid />
       <main className="pt-20">
         <Founders />
         <Businesses />

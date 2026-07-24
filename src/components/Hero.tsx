@@ -19,7 +19,7 @@ export function Hero() {
       </div>
       <div className="hidden md:block">
         <ParallaxImage
-          src="/images/homePageImage-Desktop.png"
+          src="/images/homePageImage-Desktop2.png"
           alt="Reset Studios fitness classes"
           priority
           intensity={60}
