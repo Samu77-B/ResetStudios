@@ -133,3 +133,63 @@ export const MOVEMENT = [
     text: "Beginner friendly strength and confidence building.",
   },
 ] as const;
+
+export const TIMETABLE = [
+  {
+    day: "Monday",
+    classes: [
+      { name: "Full Body Strength", start: "6:30 AM", end: "7:15 AM" },
+      { name: "Strong after 40th", start: "9:30 AM", end: "10:15 AM" },
+      { name: "Full Body Conditioning", start: "6:30 PM", end: "7:15 PM" },
+      { name: "Woman Only Training", start: "7:30 PM", end: "8:15 PM" },
+    ],
+  },
+  {
+    day: "Tuesday",
+    classes: [
+      { name: "Hyrox Training", start: "6:30 AM", end: "7:15 AM" },
+      { name: "Mummy Fit", start: "9:30 AM", end: "10:15 AM" },
+      { name: "Strong after 40th", start: "6:30 PM", end: "7:15 PM" },
+      { name: "Woman Only Training", start: "7:30 PM", end: "8:15 PM" },
+    ],
+  },
+  {
+    day: "Wednesday",
+    classes: [
+      { name: "Hyrox Training", start: "6:30 AM", end: "7:15 AM" },
+      { name: "Legs & Glutes", start: "9:30 AM", end: "10:15 AM" },
+      { name: "Full Body Strength", start: "6:30 PM", end: "7:15 PM" },
+      { name: "Full Body Conditioning", start: "7:30 PM", end: "8:15 PM" },
+    ],
+  },
+  {
+    day: "Thursday",
+    classes: [
+      { name: "Hyrox Training", start: "6:30 AM", end: "7:15 AM" },
+      { name: "Mummy Fit", start: "9:30 AM", end: "10:15 AM" },
+      { name: "Strong after 40th", start: "6:30 PM", end: "7:15 PM" },
+      { name: "Woman Only Training", start: "7:30 PM", end: "8:15 PM" },
+    ],
+  },
+  {
+    day: "Friday",
+    classes: [
+      { name: "Hyrox Training", start: "6:30 AM", end: "7:15 AM" },
+      { name: "Strong after 40th", start: "9:30 AM", end: "10:15 AM" },
+      { name: "Full Body Conditioning", start: "6:30 PM", end: "7:15 PM" },
+    ],
+  },
+  {
+    day: "Saturday",
+    classes: [
+      { name: "Reset Bootcamp", start: "10:00 AM", end: "10:45 AM" },
+      { name: "Sound Healing", start: "11:00 AM", end: "11:45 AM" },
+    ],
+  },
+  {
+    day: "Sunday",
+    classes: [
+      { name: "Mobility and Recovery", start: "10:00 AM", end: "10:45 AM" },
+    ],
+  },
+] as const;

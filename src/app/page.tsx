@@ -8,6 +8,7 @@ import { Movement } from "@/components/Movement";
 import { Process } from "@/components/Process";
 import { Quote } from "@/components/Quote";
 import { Resources } from "@/components/Resources";
+import { TimeTable } from "@/components/TimeTable";
 import { Workshop } from "@/components/Workshop";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
         <Process />
         <Coaching />
         <Movement />
+        <TimeTable />
         <Quote />
         <Resources />
         <Instagram />
