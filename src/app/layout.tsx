@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Rock_Salt } from "next/font/google";
+import { Bodoni_Moda, Montserrat } from "next/font/google";
 import { BookingProvider } from "@/components/booking/BookingProvider";
 import { SITE } from "@/lib/site";
 import "./globals.css";
@@ -10,10 +10,11 @@ const sans = Montserrat({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const script = Rock_Salt({
+const script = Bodoni_Moda({
   subsets: ["latin"],
   variable: "--font-script",
-  weight: "400",
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {

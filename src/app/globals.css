@@ -59,8 +59,9 @@ body {
 }
 
 .font-script {
-  font-family: var(--font-script), cursive;
-  font-weight: 400;
+  font-family: "Bodoni 72", var(--font-script), "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 500;
   letter-spacing: 0;
   line-height: 1;
   text-transform: none;
