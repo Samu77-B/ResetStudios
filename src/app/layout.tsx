@@ -14,7 +14,7 @@ const script = Bodoni_Moda({
   subsets: ["latin"],
   variable: "--font-script",
   weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
+  style: ["normal"],
 });
 
 export const metadata: Metadata = {
