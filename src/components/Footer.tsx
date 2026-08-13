@@ -138,7 +138,7 @@ export function Footer() {
         <p className="mt-5 text-sm leading-[1.5] text-white/50">
           Another amazing web project by{" "}
           <a
-            href="https://paradigmhub.io"
+            href="https://paradigmstudio.net/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/70 underline decoration-white/30 underline-offset-2 transition hover:text-lemon hover:decoration-lemon"
