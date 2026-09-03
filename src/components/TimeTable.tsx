@@ -81,7 +81,7 @@ export function TimeTable() {
 
         <div className="mt-10">
           <BookingButton className="inline-flex bg-ink px-8 py-3.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-ink-soft">
-            Book a Class
+            Book a Session
           </BookingButton>
         </div>
       </div>

@@ -7,7 +7,7 @@ export function BookFooterLinks() {
     <ul className="mt-5 space-y-3">
       <li>
         <BookingButton className="text-base leading-[1.5] text-white/70 transition hover:text-white">
-          Book a class
+          Book a session
         </BookingButton>
       </li>
     </ul>

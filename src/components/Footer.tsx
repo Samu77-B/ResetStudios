@@ -127,7 +127,7 @@ export function Footer() {
           <span className="font-script text-[1.05em] text-lemon">Reset</span>
         </p>
         <BookingButton className="mt-6 inline-flex bg-lemon px-8 py-3.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:bg-lemon-deep">
-          Book a Class
+          Book a Session
         </BookingButton>
         <p className="mt-8 text-[11px] uppercase tracking-[0.14em] text-white/40">
           © {new Date().getFullYear()} Reset Studios. All rights reserved.

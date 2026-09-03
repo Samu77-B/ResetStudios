@@ -65,7 +65,7 @@ export function HeroClassInfo({ showHeadline = true }: HeroClassInfoProps) {
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
         <BookingButton className="inline-flex justify-center bg-lemon px-6 py-3.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-ink transition hover:bg-lemon-deep">
-          Book a Class
+          Book a Session
         </BookingButton>
       </div>
 
