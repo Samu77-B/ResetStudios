@@ -14,7 +14,7 @@ export const SITE = {
 } as const;
 
 export const CLASSES = {
-  label: "Fitness Classes · Recharge",
+  label: "Fitness Classes",
   headline: ["Build Strength", "Burn Fat", "Stress Relief"],
   subline: "Work Hard · Show Up · Reset",
   specs: [
@@ -119,18 +119,18 @@ export const COACHING_PACKAGES = [
 export const MOVEMENT = [
   {
     letter: "M",
-    title: "Movement & Stretch",
-    text: "Full body mobility and gentle strength for all levels.",
+    title: "Package 5 to 10 — Movement & Stretch",
+    text: "Improve mobility, recover faster, and support your body through fat loss and training.",
+  },
+  {
+    letter: "P",
+    title: "Personal Training",
+    text: "Custom 1-on-1 coaching designed to build lean muscle and shred body fat safely.",
   },
   {
     letter: "B",
-    title: "Breathwork",
-    text: "Simple breathing tools to calm and regulate energy.",
-  },
-  {
-    letter: "S",
-    title: "Strength Reset",
-    text: "Beginner friendly strength and confidence building.",
+    title: "Boxing",
+    text: "High-intensity conditioning to torch calories, build endurance, and tone up.",
   },
 ] as const;
 

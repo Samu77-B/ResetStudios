@@ -5,11 +5,11 @@ export function Movement() {
     <section id="movement" className="bg-white px-5 py-20 md:px-8 md:py-28">
       <div className="mx-auto max-w-6xl">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
-          Movement & Breathwork
+          Andrenys Garcia
         </p>
         <h2 className="mt-4 font-display text-[clamp(2rem,4.5vw,3.25rem)] text-ink">
-          Move With{" "}
-          <span className="font-script text-[1.05em]">Intention.</span>
+          Work With{" "}
+          <span className="font-script text-[1.05em]">Andrenys</span>
         </h2>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
