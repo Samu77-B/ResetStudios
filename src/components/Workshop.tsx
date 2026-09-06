@@ -3,7 +3,7 @@ export function Workshop() {
     { label: "Date", value: "Every Sunday" },
     {
       label: "Location",
-      value: "The I/O Centre, 7 Lea Rd, Unit 6, Waltham Abbey, EN9 1AS",
+      value: "Waltham Abbey, unit 6, EN9 1AS",
     },
     { label: "Time", value: "10AM" },
     { label: "Booking", value: "Coming soon" },
