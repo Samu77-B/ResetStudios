@@ -1,8 +1,11 @@
 export function Workshop() {
   const details = [
-    { label: "Date", value: "Coming soon" },
-    { label: "Location", value: "North London" },
-    { label: "Time", value: "10:30 am" },
+    { label: "Date", value: "Every Sunday" },
+    {
+      label: "Location",
+      value: "The I/O Centre, 7 Lea Rd, Unit 6, Waltham Abbey, EN9 1AS",
+    },
+    { label: "Time", value: "10AM" },
     { label: "Booking", value: "Coming soon" },
   ];
 
@@ -18,11 +21,8 @@ export function Workshop() {
             <span className="font-script text-[1.05em]">Session</span>
           </h2>
           <p className="prose-body mt-6 max-w-lg">
-            A 90 minute whole person session combining gentle movement,
+            A 45 minute whole person session combining gentle movement,
             breathwork, nervous system coaching, journalling and reflection.
-          </p>
-          <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
-            Information Coming Soon
           </p>
         </div>
 
@@ -33,7 +33,7 @@ export function Workshop() {
                 {item.label}
               </p>
               <p
-                className={`mt-2 font-display text-lg ${
+                className={`mt-2 font-display text-lg leading-snug ${
                   item.value === "Coming soon" ? "text-muted" : "text-ink"
                 }`}
               >

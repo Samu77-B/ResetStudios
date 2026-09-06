@@ -107,7 +107,7 @@ export const COACHING_PACKAGES = [
     text: "Focused support for one area of life, identity or emotion.",
   },
   {
-    title: "3 session package",
+    title: "5-10 sessions",
     text: "Deeper work across six weeks with continuity.",
   },
   {
