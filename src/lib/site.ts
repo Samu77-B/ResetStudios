@@ -134,6 +134,82 @@ export const MOVEMENT = [
   },
 ] as const;
 
+export const GROUP_PACKAGES = {
+  label: "Group Training",
+  headline: "Packages",
+  tiers: [
+    {
+      name: "Tier 1",
+      rate: "£10 per class",
+      examples:
+        "Full Body Strength, Full Body Conditioning, Woman Only, Mummy Fit",
+      plans: [
+        { name: "Pay As You Go", price: "£15 per class" },
+        {
+          name: "4 Sessions / Month",
+          price: "£40 / month",
+          note: "Good for 1x a week",
+        },
+        {
+          name: "8 Sessions / Month",
+          price: "£60 / month",
+          note: "Good for 2x a week",
+        },
+        {
+          name: "12 Sessions / Month",
+          price: "£100 / month",
+          note: "Good for 3x a week",
+        },
+        {
+          name: "16 Sessions / Month",
+          price: "£130 / month",
+          note: "Recommended addition for 4x a week classes like Woman Only",
+        },
+      ],
+    },
+    {
+      name: "Tier 2",
+      rate: "£15 per class",
+      examples:
+        "Legs & Glutes, Reset Bootcamp, Mobility & Recovery, Sound Healing",
+      plans: [
+        { name: "Pay As You Go", price: "£20 per class" },
+        { name: "4 Sessions / Month", price: "£60 / month" },
+        { name: "8 Sessions / Month", price: "£100 / month" },
+        { name: "12 Sessions / Month", price: "£160 / month" },
+      ],
+    },
+    {
+      name: "Tier 3",
+      rate: "Hyrox Training",
+      examples: "Hyrox Training",
+      plans: [
+        { name: "Pay As You Go", price: "£25 per class" },
+        {
+          name: "4 Sessions / Month",
+          price: "£80 / month",
+          note: "1x a week",
+        },
+        {
+          name: "8 Sessions / Month",
+          price: "£120 / month",
+          note: "2x a week",
+        },
+        {
+          name: "12 Sessions / Month",
+          price: "£220 / month",
+          note: "3x a week",
+        },
+        {
+          name: "16 Sessions / Month",
+          price: "£280 / month",
+          note: "4x a week — full weekly Hyrox schedule",
+        },
+      ],
+    },
+  ],
+} as const;
+
 export const TIMETABLE = [
   {
     day: "Monday",

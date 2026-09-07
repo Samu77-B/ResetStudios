@@ -10,6 +10,7 @@ const links = [
   { href: "/#coaching", label: "Coaching" },
   { href: "/#movement", label: "Movement" },
   { href: "/#timetable", label: "Time Table" },
+  { href: "/#packages", label: "Packages" },
   { href: "/#resources", label: "Resources" },
   { href: "/founders", label: "Founders" },
 ];
