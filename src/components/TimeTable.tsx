@@ -1,8 +1,11 @@
-import { TimeTableView } from "@/components/TimeTableView";
-import { loadTimetable } from "@/lib/gymsynk-schedule";
+import { GymSynkScheduleEmbed } from "@/components/GymSynkScheduleEmbed";
 
-export async function TimeTable() {
-  const { days, source } = await loadTimetable();
-
-  return <TimeTableView days={days} source={source} />;
+export function TimeTable() {
+  return (
+    <section id="timetable" className="bg-bone-deep px-5 py-20 md:px-8 md:py-28">
+      <div className="mx-auto max-w-6xl">
+        <GymSynkScheduleEmbed />
+      </div>
+    </section>
+  );
 }
