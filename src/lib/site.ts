@@ -117,8 +117,9 @@ export const COACHING_PACKAGES = [
 ] as const;
 
 export const OPEN_DAY = {
-  /** Set NEXT_PUBLIC_FORMSPREE_OPEN_DAY in production (Formspree form id). */
-  formspreeFormId: process.env.NEXT_PUBLIC_FORMSPREE_OPEN_DAY ?? "",
+  /** Override with NEXT_PUBLIC_FORMSPREE_OPEN_DAY if needed. */
+  formspreeFormId:
+    process.env.NEXT_PUBLIC_FORMSPREE_OPEN_DAY ?? "xqpaoqby",
   dateLabel: "Sunday, 8 November 2026",
   timeLabel: "From 2:00 PM",
   addressLines: [
