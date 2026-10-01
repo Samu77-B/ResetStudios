@@ -116,6 +116,55 @@ export const COACHING_PACKAGES = [
   },
 ] as const;
 
+export const OPEN_DAY = {
+  /** Set NEXT_PUBLIC_FORMSPREE_OPEN_DAY in production (Formspree form id). */
+  formspreeFormId: process.env.NEXT_PUBLIC_FORMSPREE_OPEN_DAY ?? "",
+  dateLabel: "Sunday, 8 November 2026",
+  timeLabel: "From 2:00 PM",
+  addressLines: [
+    "Reset Studios",
+    "The I/O Centre",
+    "7 Lea Road",
+    "Waltham Abbey",
+    "EN9 1AS",
+  ] as const,
+  formHeading:
+    "Be the First to Experience Reset Studios. Register Below for Free Access on the Day.",
+  goals: [
+    { value: "Strength", label: "Strength", icon: "/logos/strength.png" },
+    { value: "Fitness", label: "Fitness", icon: "/logos/fitness.png" },
+    {
+      value: "Rebuilding Routine",
+      label: "Rebuilding Routine",
+      icon: "/logos/rebuild.png",
+    },
+    { value: "Weight Loss", label: "Weight Loss", icon: "/logos/weight.png" },
+    {
+      value: "General Wellbeing",
+      label: "General Wellbeing",
+      icon: "/logos/general.png",
+    },
+  ] as const,
+  expectations: [
+    {
+      title: "Free Studio Access",
+      text: "Test out the gym floor and brand-new facilities all day long.",
+    },
+    {
+      title: "Meet the Team",
+      text: "Get expert advice and answers to your training questions.",
+    },
+    {
+      title: "Exclusive Launch Offers",
+      text: "Special founding member discounts available only to those who attend the open day.",
+    },
+    {
+      title: "Complimentary Refreshments",
+      text: "Grab a quick drink and chat with the team.",
+    },
+  ] as const,
+} as const;
+
 export const MOVEMENT = [
   {
     letter: "M",
