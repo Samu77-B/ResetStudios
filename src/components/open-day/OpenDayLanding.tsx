@@ -2,6 +2,7 @@ import Link from "next/link";
 import { OpenDayHeader } from "@/components/open-day/OpenDayHeader";
 import { OpenDayRegistrationForm } from "@/components/open-day/OpenDayRegistrationForm";
 import { ParallaxImage } from "@/components/ParallaxImage";
+import { SiteCredits } from "@/components/SiteCredits";
 import { OPEN_DAY, SITE } from "@/lib/site";
 
 export function OpenDayLanding() {
@@ -138,6 +139,7 @@ export function OpenDayLanding() {
               </p>
             </div>
           </div>
+          <SiteCredits className="mx-auto mt-12 max-w-6xl border-t border-white/10 px-0 pt-10 text-center md:mt-14 md:pt-12" />
         </section>
       </main>
     </>
