@@ -40,15 +40,12 @@ export function OpenDayLanding() {
                 Waltham Abbey · Free Open Day
               </p>
               <h1 className="mt-4 font-display text-[clamp(2rem,6vw,3.25rem)] text-white">
-                Hit{" "}
-                <span className="font-script text-[1.05em] normal-case">
-                  Reset.
-                </span>
+                Reset Studios
               </h1>
               <p className="mt-5 text-base leading-relaxed text-white/90 md:text-lg">
-                The Reset Gym is opening its doors on {OPEN_DAY.dateLabel},{" "}
-                {OPEN_DAY.timeLabel.toLowerCase()} and you&apos;re invited to
-                our <strong className="font-semibold">FREE Open Day</strong>.
+                Reset Studios is opening its doors on {OPEN_DAY.dateLabel},{" "}
+                {OPEN_DAY.timeLabel.toLowerCase()}. You&apos;re invited to our{" "}
+                <strong className="font-semibold">FREE Open Day</strong>.
               </p>
               <p className="mt-4 text-sm text-white/75">{address}</p>
               <a
