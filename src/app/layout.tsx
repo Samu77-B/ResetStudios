@@ -20,6 +20,20 @@ const script = Bodoni_Moda({
 export const metadata: Metadata = {
   title: SITE.title,
   description: SITE.description,
+  icons: {
+    icon: [
+      {
+        url: "/logos/logo-dark.png",
+        type: "image/png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/logos/logo-white.png",
+        type: "image/png",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+  },
   openGraph: {
     title: SITE.title,
     description: SITE.description,
