@@ -75,7 +75,8 @@ export function OpenDayLanding() {
                 to train in, The Reset Studio was built for you.
               </p>
               <p>
-                We&apos;re opening our brand-new Waltham Abbey facility on 8
+                We&apos;re opening our brand-new exclusive Waltham Abbey
+                facility on 8
                 November, and we&apos;re celebrating with an all-day Free Open
                 Day. Come take a look around, meet our trainers, test out the
                 equipment, and see what setting a new standard for your health
