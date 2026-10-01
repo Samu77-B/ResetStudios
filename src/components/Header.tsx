@@ -6,12 +6,12 @@ import { useEffect, useState } from "react";
 import { BookingButton } from "@/components/booking/BookingProvider";
 
 const links = [
-  { href: "/#workshop", label: "Workshop" },
-  { href: "/#coaching", label: "Coaching" },
-  { href: "/#movement", label: "Movement" },
-  { href: "/#timetable", label: "Time Table" },
-  { href: "/#packages", label: "Packages" },
-  { href: "/#resources", label: "Resources" },
+  { href: "/home#workshop", label: "Workshop" },
+  { href: "/home#coaching", label: "Coaching" },
+  { href: "/home#movement", label: "Movement" },
+  { href: "/home#timetable", label: "Time Table" },
+  { href: "/home#packages", label: "Packages" },
+  { href: "/home#resources", label: "Resources" },
   { href: "/founders", label: "Founders" },
 ];
 
@@ -49,7 +49,7 @@ export function Header({ solid = false }: HeaderProps) {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 md:px-8">
           <Link
-            href="/#home"
+            href="/home#home"
             onClick={() => setOpen(false)}
             className="relative flex shrink-0 items-center gap-3"
           >

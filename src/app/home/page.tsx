@@ -1,0 +1,42 @@
+import type { Metadata } from "next";
+import { BrandPromise } from "@/components/BrandPromise";
+import { Coaching } from "@/components/Coaching";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import { Hero } from "@/components/Hero";
+import { Instagram } from "@/components/Instagram";
+import { Movement } from "@/components/Movement";
+import { Process } from "@/components/Process";
+import { Quote } from "@/components/Quote";
+import { Resources } from "@/components/Resources";
+import { GroupPackages } from "@/components/GroupPackages";
+import { TimeTable } from "@/components/TimeTable";
+import { Workshop } from "@/components/Workshop";
+import { SITE } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: SITE.title,
+  description: SITE.description,
+};
+
+export default function MainSitePage() {
+  return (
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <BrandPromise />
+        <Workshop />
+        <Process />
+        <Coaching />
+        <Movement />
+        <TimeTable />
+        <GroupPackages />
+        <Quote />
+        <Resources />
+        <Instagram />
+      </main>
+      <Footer />
+    </>
+  );
+}

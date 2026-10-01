@@ -1,35 +1,13 @@
-import { BrandPromise } from "@/components/BrandPromise";
-import { Coaching } from "@/components/Coaching";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import { Hero } from "@/components/Hero";
-import { Instagram } from "@/components/Instagram";
-import { Movement } from "@/components/Movement";
-import { Process } from "@/components/Process";
-import { Quote } from "@/components/Quote";
-import { Resources } from "@/components/Resources";
-import { GroupPackages } from "@/components/GroupPackages";
-import { TimeTable } from "@/components/TimeTable";
-import { Workshop } from "@/components/Workshop";
+import type { Metadata } from "next";
+import { OpenDayLanding } from "@/components/open-day/OpenDayLanding";
+import { SITE } from "@/lib/site";
 
-export default function Home() {
-  return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <BrandPromise />
-        <Workshop />
-        <Process />
-        <Coaching />
-        <Movement />
-        <TimeTable />
-        <GroupPackages />
-        <Quote />
-        <Resources />
-        <Instagram />
-      </main>
-      <Footer />
-    </>
-  );
+export const metadata: Metadata = {
+  title: `Free Open Day | ${SITE.name}`,
+  description:
+    "Register for free access at the Reset Studios Waltham Abbey open day on Sunday 8 November. Tour the gym, meet the team, and claim launch offers.",
+};
+
+export default function HomePage() {
+  return <OpenDayLanding />;
 }

@@ -24,7 +24,7 @@ export function OpenDayHeader() {
           </div>
         </Link>
         <Link
-          href="/"
+          href="/home"
           className="text-[12px] font-semibold uppercase tracking-[0.12em] text-white/85 transition hover:text-lemon"
         >
           Main site
