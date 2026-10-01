@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bodoni_Moda, Montserrat } from "next/font/google";
 import { BookingProvider } from "@/components/booking/BookingProvider";
+import { StructuredData } from "@/components/StructuredData";
 import { SITE } from "@/lib/site";
 import "./globals.css";
 
@@ -53,6 +54,7 @@ export default function RootLayout({
       className={`${sans.variable} ${script.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-bone text-ink font-sans">
+        <StructuredData />
         <BookingProvider>{children}</BookingProvider>
       </body>
     </html>

@@ -136,16 +136,26 @@ export function Footer() {
         <p className="mt-2 text-[11px] tracking-[0.08em] text-lemon/80">
           Mind & Body · {SITE.instagramHandle}
         </p>
-        <p className="mt-5 text-sm leading-[1.5] text-white/50">
-          Another amazing web project by{" "}
+        <p className="mt-5 max-w-lg mx-auto text-sm leading-[1.6] text-white/50">
+          Website designed, built and maintained by{" "}
           <a
             href="https://paradigmstudio.net/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white/70 underline decoration-white/30 underline-offset-2 transition hover:text-lemon hover:decoration-lemon"
           >
-            the Paradigm Studio
+            ParadigmStudio.net
           </a>
+          . Booking and schedule features powered by the{" "}
+          <a
+            href="https://gymsynk.net/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/70 underline decoration-white/30 underline-offset-2 transition hover:text-lemon hover:decoration-lemon"
+          >
+            GymSynk
+          </a>{" "}
+          platform.
         </p>
       </div>
     </footer>
