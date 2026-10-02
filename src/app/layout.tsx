@@ -24,16 +24,28 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/logos/logo-dark.png",
+        url: "/favicon/icon-light-32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        url: "/favicon/icon-light-32.png",
+        sizes: "32x32",
         type: "image/png",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/logos/logo-white.png",
+        url: "/favicon/icon-dark-32.png",
+        sizes: "32x32",
         type: "image/png",
         media: "(prefers-color-scheme: dark)",
       },
     ],
+    apple: {
+      url: "/favicon/apple-touch-icon.png",
+      sizes: "180x180",
+      type: "image/png",
+    },
   },
   openGraph: {
     title: SITE.title,
