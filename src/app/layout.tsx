@@ -19,6 +19,7 @@ const script = Bodoni_Moda({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE.url),
   title: SITE.title,
   description: SITE.description,
   icons: {

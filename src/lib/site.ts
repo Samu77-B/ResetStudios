@@ -1,5 +1,7 @@
 export const SITE = {
   name: "Reset Studios",
+  /** Canonical production origin (www). Override with NEXT_PUBLIC_SITE_URL. */
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.resetstudios.co.uk",
   tagline: "Mind & Body",
   title: "Reset Studios | Mind & Body",
   description:
@@ -131,6 +133,27 @@ export const OPEN_DAY = {
   ] as const,
   formHeading:
     "Be the First to Experience Reset Studios. Register Below for Free Access on the Day.",
+  /** Paste into Formspree → form → Workflow → Auto Response (see formspree.json). */
+  autoreply: {
+    fromName: "Reset Studios",
+    subject: "You're registered — Reset Studios Open Day",
+    message: [
+      "Hi there,",
+      "",
+      "Thank you for registering for the Reset Studios Free Open Day on Sunday, 8 November 2026.",
+      "",
+      "You're confirmed for free access from 2:00 PM at The I/O Centre, 7 Lea Road, Waltham Abbey, EN9 1AS.",
+      "",
+      "Come take a look around, meet our trainers, test the equipment, and see what setting a new standard for your health feels like.",
+      "",
+      "We can't wait to welcome you.",
+      "",
+      "Reset Studios",
+      "Info@resetstudios.co.uk",
+      "",
+      "Follow us for updates: @resetstudiosuk on Instagram",
+    ].join("\n"),
+  },
   goals: [
     { value: "Strength", label: "Strength", icon: "/logos/strength.png" },
     { value: "Fitness", label: "Fitness", icon: "/logos/fitness.png" },
