@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Temporary while Open Day is the public homepage. Remove to restore /home and /founders.
+  // Temporary while the public homepage is the holding page. Remove to restore /home and /founders.
   async redirects() {
     return [
       {

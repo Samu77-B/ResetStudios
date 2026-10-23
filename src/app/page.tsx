@@ -1,13 +1,24 @@
 import type { Metadata } from "next";
-import { OpenDayLanding } from "@/components/open-day/OpenDayLanding";
+import Image from "next/image";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `Free Open Day | ${SITE.name}`,
-  description:
-    "Register for free access at the Reset Studios Waltham Abbey open day on Sunday 8 November. Tour the gym, meet the team, and claim launch offers.",
+  title: SITE.title,
+  description: SITE.description,
 };
 
 export default function HomePage() {
-  return <OpenDayLanding />;
+  return (
+    <main className="fixed inset-0 flex items-center justify-center bg-ink-soft">
+      <h1 className="sr-only">{SITE.name}</h1>
+      <Image
+        src="/logos/logo-white.png"
+        alt="Reset Studios"
+        width={512}
+        height={512}
+        className="h-20 w-20 object-contain sm:h-24 sm:w-24 md:h-28 md:w-28"
+        priority
+      />
+    </main>
+  );
 }
